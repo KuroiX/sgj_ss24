@@ -2,7 +2,8 @@
 
 namespace Dialogue
 {
-    public class VoiceLine : MonoBehaviour
+    [CreateAssetMenu]
+    public class VoiceLine : ScriptableObject
     {
         public AudioClip audioClip;
         public Sprite icon;
