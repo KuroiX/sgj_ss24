@@ -37,19 +37,15 @@ namespace IntroCutScene
 
         private void FadeInNext()
         {
+            Debug.Log($"current index: {_currentIndex}");
             if (_currentIndex == _numberOfSprites - 1)
             {
                 CancelInvoke(nameof(FadeInNext));
                 return;
             }
-
-            _currentIndex++;
-
-            // _currentSprite = spriteObjects[_currentIndex].GetComponent<SpriteRenderer>();
-            // var currentSpriteColor = _currentSprite.color;
-            // currentSpriteColor = new Color(currentSpriteColor.r, currentSpriteColor.g, currentSpriteColor.b, 0);
-            // spriteObjects[_currentIndex].GetComponent<SpriteRenderer>().color = currentSpriteColor;
+            
             spriteObjects[_currentIndex].SetActive(true);
+            _currentIndex++;
         }
     }
 }

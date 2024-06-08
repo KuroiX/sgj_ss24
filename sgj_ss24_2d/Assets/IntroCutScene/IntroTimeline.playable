@@ -142,12 +142,45 @@ MonoBehaviour:
     m_Start: 11.95
     m_ClipIn: 0
     m_Asset: {fileID: 630715723869245837}
-    m_Duration: 12.850000000000001
+    m_Duration: 15.133333333333333
     m_TimeScale: 1
     m_ParentTrack: {fileID: -8527592717568870489}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
     m_BlendInDuration: 0.5333333333333332
+    m_BlendOutDuration: 0.5333333333333314
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: Virtual Camera Grill
+  - m_Version: 1
+    m_Start: 26.55
+    m_ClipIn: 0
+    m_Asset: {fileID: 6590068306045554473}
+    m_Duration: 12.48333333333333
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: -8527592717568870489}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: 0.5333333333333314
     m_BlendOutDuration: -1
     m_MixInCurve:
       serializedVersion: 2
@@ -206,7 +239,7 @@ MonoBehaviour:
     m_PreExtrapolationMode: 0
     m_PostExtrapolationTime: 0
     m_PreExtrapolationTime: 0
-    m_DisplayName: Virtual Camera Grill
+    m_DisplayName: Virtual Camera Grill Zoom
   m_Markers:
     m_Objects: []
 --- !u!114 &-8210389371301677115
@@ -253,7 +286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
   m_Name: OnLastDialogue
   m_EditorClassIdentifier: 
-  m_Time: 20.966666666666665
+  m_Time: 22.183333333333334
   m_Retroactive: 0
   m_EmitOnce: 0
   m_Asset: {fileID: 11400000, guid: ac26d4256513f3840b03cc9eac4e5c1b, type: 2}
@@ -392,6 +425,8 @@ MonoBehaviour:
     - {fileID: 9096444702128156834}
     - {fileID: 2640083588681544231}
     - {fileID: -4311506524816361900}
+    - {fileID: 4979746430810507290}
+    - {fileID: 7656150976961407501}
 --- !u!114 &4037195755064447581
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -408,6 +443,22 @@ MonoBehaviour:
   m_Retroactive: 0
   m_EmitOnce: 0
   m_Asset: {fileID: 11400000, guid: cfa63e8e85602a749a6fdb9365c401fe, type: 2}
+--- !u!114 &4979746430810507290
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
+  m_Name: OnCutSceneEnde
+  m_EditorClassIdentifier: 
+  m_Time: 29.833333333333332
+  m_Retroactive: 0
+  m_EmitOnce: 0
+  m_Asset: {fileID: 11400000, guid: 5c9a52ca715ff864d9a0251219657db8, type: 2}
 --- !u!114 &5101918493230074438
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -472,6 +523,38 @@ MonoBehaviour:
   m_Retroactive: 0
   m_EmitOnce: 0
   m_Asset: {fileID: 11400000, guid: 325201bfd3d886a4eb53792295938445, type: 2}
+--- !u!114 &6590068306045554473
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90fb794a295e73545af71bcdb7375791, type: 3}
+  m_Name: CinemachineShot
+  m_EditorClassIdentifier: 
+  DisplayName: 
+  VirtualCamera:
+    exposedName: ec1f1c289052a14409fdc35f2e527845
+    defaultValue: {fileID: 0}
+--- !u!114 &7656150976961407501
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
+  m_Name: OnRemoveDrops
+  m_EditorClassIdentifier: 
+  m_Time: 26.416666666666668
+  m_Retroactive: 0
+  m_EmitOnce: 0
+  m_Asset: {fileID: 11400000, guid: fcf5786fea5ff294c8f622810048f56a, type: 2}
 --- !u!114 &8335147771700110855
 MonoBehaviour:
   m_ObjectHideFlags: 1
