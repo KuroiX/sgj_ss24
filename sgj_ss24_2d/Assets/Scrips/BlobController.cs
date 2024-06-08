@@ -48,7 +48,7 @@ public class BlobController : MonoBehaviour
 
     private void Update()
     {
-        if(!doSomething)return;
+        if(!doSomething) return;
         
         ShrinkBlob();
 

@@ -90,6 +90,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 9511eca1-a8a2-4479-9e75-2ba6ba0ddba6
     m_ActionName: Move/Ability
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8107859032681714043}
+        m_TargetAssemblyTypeName: PlayerClass, Assembly-CSharp
+        m_MethodName: StartGame
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 255aa4f7-c8d2-4210-aca3-a0b8edc4b229
+    m_ActionName: Move/Start[/SwitchProControllerHID/start,/XInputControllerWindows/start]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Move

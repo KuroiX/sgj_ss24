@@ -46,6 +46,8 @@ public class GameLoop : MonoBehaviour
 
     public void StartGameLoop()
     {
+        if (players.Count < 2) return;
+        Debug.Log("start");
         _currentStage = 0;
         _currentTime = stages[_currentStage].time;
         UpdateTimer(_currentTime);
@@ -58,8 +60,11 @@ public class GameLoop : MonoBehaviour
     private void OnPlayerJoined(PlayerInput obj)
     {
         players.Add(obj.gameObject.GetComponent<PlayerClass>());
-        if(players.Count >= 2) 
+        if (players.Count >= 2)
+        {
+            //StartGameLoop();
             ShowStartButton();
+        }
     }
 
     private void ShowStartButton()
