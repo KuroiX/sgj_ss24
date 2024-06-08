@@ -81,8 +81,12 @@ public class BlobController : MonoBehaviour
 
     private void ShrinkBlob()
     {
-        if (_currentWaterStorage <= 0.05) return;
-        
+        if (_currentWaterStorage <= 0.05)
+        {
+            FindObjectOfType<SceneLoader>().LoadNextScene();
+            StopBlob();
+        }
+
         _currentWaterStorage -= shrinkSubtrahent.shringkSubtrahent * Time.deltaTime;
         transform.localScale = new Vector3(1, 1, 1) * _currentWaterStorage / initialWaterStorage;
     }

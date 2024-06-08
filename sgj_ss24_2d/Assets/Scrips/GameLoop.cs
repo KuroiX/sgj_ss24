@@ -37,7 +37,7 @@ public class GameLoop : MonoBehaviour
         _gameLoopStarted = false;
     }
 
-    private void StartGameLoop()
+    public void StartGameLoop()
     {
         _currentStage = 0;
         _currentTime = stages[_currentStage].time;
@@ -50,10 +50,14 @@ public class GameLoop : MonoBehaviour
 
     private void OnPlayerJoined(PlayerInput obj)
     {
-        Debug.Log("ASDFASDFASDF");
         players.Add(obj.gameObject.GetComponent<PlayerClass>());
         if(players.Count >= 2) 
-            StartGameLoop();
+            ShowStartButton();
+    }
+
+    private void ShowStartButton()
+    {
+        Debug.Log("TODO: nice asset");
     }
 
     private void Update()
@@ -94,6 +98,7 @@ public class GameLoop : MonoBehaviour
         if (_currentStage >= stages.Count - 1)
         {
             Debug.Log("YOU WIN");
+            FindObjectOfType<SceneLoader>().LoadNextScene();
             return;
         }
         
