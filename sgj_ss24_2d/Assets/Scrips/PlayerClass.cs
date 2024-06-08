@@ -8,6 +8,7 @@ using UnityEngine.Serialization;
 
 public class PlayerClass : MonoBehaviour
 {
+    public GameObject blobPrefab;
     [SerializeField] private BlobController blobController;
     [SerializeField] private Card _card;
     [SerializeField] private bool isTutorial;
@@ -19,12 +20,13 @@ public class PlayerClass : MonoBehaviour
         
         if (isTutorial)
         {
-            BlobController[] blobControllers = FindObjectsOfType<BlobController>();
+            //BlobController[] blobControllers = FindObjectsOfType<BlobController>();
+            blobController = Instantiate(blobPrefab).GetComponent<BlobController>();
             if (FindObjectOfType<PlayerInputManager>().playerCount == 1)
             {
                 _card = Instantiate(_card);
                 _card.cardActions = new List<CardAction>() {CardAction.Up, CardAction.Down};
-                blobController = blobControllers[0];
+                //blobController = blobControllers[0];
                 
                 SceneManager.sceneLoaded += (arg0, mode) =>
                 {
@@ -39,8 +41,15 @@ public class PlayerClass : MonoBehaviour
             {
                 _card = Instantiate(_card);
                 _card.cardActions = new List<CardAction>() {CardAction.Left, CardAction.Right};
-                blobController = blobControllers[1];
+                //blobController = blobControllers[1];
                 
+                SceneManager.sceneLoaded += (arg0, mode) =>
+                {
+                    isTutorial = false;
+                    blobController = FindObjectOfType<BlobController>();
+                };
+                
+                DontDestroyOnLoad(gameObject);
             }
         }
     }

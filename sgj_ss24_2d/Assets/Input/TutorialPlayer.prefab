@@ -123,6 +123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1426db2c3c3492646bf3825582afd685, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blobPrefab: {fileID: 1043190072327815016, guid: a8f312a80960c4b4dad9d4e88beb04cf, type: 3}
   blobController: {fileID: 0}
   _card: {fileID: 11400000, guid: d1c7c1c22ed126c4bb626787c0985c26, type: 2}
   isTutorial: 1
