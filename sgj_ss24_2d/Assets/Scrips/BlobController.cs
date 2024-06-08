@@ -84,7 +84,7 @@ public class BlobController : MonoBehaviour
     {
         if (_currentWaterStorage <= 0.05)
         {
-            FindObjectOfType<SceneLoader>().LoadNextScene();
+            FindObjectOfType<GameLoop>().GameOver();
             StopBlob();
         }
 

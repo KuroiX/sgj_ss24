@@ -91,7 +91,7 @@ public class GameLoop : MonoBehaviour
 
     private void Update()
     {
-        if(!_gameLoopStarted) return;
+        if(!_gameLoopStarted || gameOver) return;
         
         _currentTime -= Time.deltaTime;
         UpdateTimer(_currentTime);
@@ -101,9 +101,11 @@ public class GameLoop : MonoBehaviour
         }
     }
 
-    private void GameOver()
+    public void GameOver()
     {
-        
+        gameOver = true;
+        FindObjectOfType<WinLoosUi>().DisplayLoosUI();
+        StartCoroutine(GoToMainMenu());
     }
 
     private void UpdateTimer(float time)
@@ -121,19 +123,29 @@ public class GameLoop : MonoBehaviour
         }
     }
 
+    private bool gameOver;
+
     [ContextMenu("Switch Stage")]
     public void SwitchStage()
     {
-        if (_currentStage >= stages.Count - 1)
+        if (_currentStage >= stages.Count - 1 && !gameOver)
         {
+            gameOver = true;
             Debug.Log("YOU WIN");
-            FindObjectOfType<SceneLoader>().LoadNextScene();
+            FindObjectOfType<WinLoosUi>().DisplayWinnUI();
+            StartCoroutine(GoToMainMenu());
             return;
         }
         
         _currentStage++;
         EnterStage();
         //TriggerCutscene();
+    }
+
+    private IEnumerator GoToMainMenu()
+    {
+        yield return new WaitForSeconds(5);
+        FindObjectOfType<SceneLoader>().LoadNextScene();
     }
 
     public void TriggerCutscene()
