@@ -37,7 +37,11 @@ namespace IntroCutScene
 
         private void FadeInNext()
         {
-            if (_currentIndex == _numberOfSprites - 1) CancelInvoke(nameof(FadeInNext));
+            if (_currentIndex == _numberOfSprites - 1)
+            {
+                CancelInvoke(nameof(FadeInNext));
+                return;
+            }
 
             _currentIndex++;
 
