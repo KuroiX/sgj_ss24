@@ -7,16 +7,18 @@ using UnityEngine.Serialization;
 
 public class PlayerClass : MonoBehaviour
 {
-    [SerializeField] private InputActionReference inputActionReference;
+    [SerializeField] private InputActionReference inputActionMove;
+    [SerializeField] private InputActionReference inputActionDash;
     [SerializeField] private BlobController blobController;
     private Card _card;
     
     private void Start()
     {
-        inputActionReference.action.performed += ActionOnperformed;
+        inputActionMove.action.performed += ActionOnperformedMove;
+        inputActionDash.action.performed += ActionOnperformedDash;
     }
-    
-    private void ActionOnperformed(InputAction.CallbackContext obj)
+
+    private void ActionOnperformedMove(InputAction.CallbackContext obj)
     {
        Vector2 input = obj.ReadValue<Vector2>();
 
@@ -42,6 +44,11 @@ public class PlayerClass : MonoBehaviour
                    break;
            }
        }
+    }
+    
+    private void ActionOnperformedDash(InputAction.CallbackContext obj)
+    {
+      blobController.Dash();
     }
     
     public void SetCard(Card newCard)

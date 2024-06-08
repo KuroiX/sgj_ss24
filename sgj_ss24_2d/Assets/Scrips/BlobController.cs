@@ -8,20 +8,28 @@ using UnityEngine.Serialization;
 [RequireComponent(typeof(Rigidbody2D))]
 public class BlobController : MonoBehaviour
 {
+    [Header("Scale")]
     public float minScale = 0.1f;
     public float maxScale = 2;
-    
+    [Header("Speed")]
     public float minSpeed;
     public float maxSpeed;
-    
+    [Header("Dash")]
+    public float dashForce = 10;
+    public float dashCoolDown = 3;
+    [Header("Other")]
     public float shrinkFactor;
+   
 
     private float _upInput;
     private float _downInput;
     private float _rightInput;
     private float _leftInput;
 
+    private Vector2 _velocity;
+
     private Rigidbody2D _rigidbody2D;
+    private bool canDash = true;
 
     private void Start()
     {
@@ -52,8 +60,7 @@ public class BlobController : MonoBehaviour
     
     private void Move()
     {
-        Vector2 moveDir = new Vector2(_rightInput - _leftInput, _upInput - _downInput);
-        moveDir.Normalize();
+        Vector2 moveDir = CalculateDir();
 
         float currSpeed = Mathf.Lerp(minSpeed, maxSpeed,
             Mathf.InverseLerp(maxScale, minScale, transform.localScale.x));
@@ -76,9 +83,31 @@ public class BlobController : MonoBehaviour
         transform.localScale = newScale;
     }
 
+    private Vector2 CalculateDir()
+    {
+        var vec = new Vector2(_rightInput - _leftInput, _upInput - _downInput);
+        return vec.normalized;
+    }
+
     private bool IsDeath()
     {
         return transform.localScale.x <= minScale;
+    }
+
+    public void Dash()
+    {
+        if (canDash)
+        {
+            var vec = CalculateDir();
+            _rigidbody2D.AddForce(vec * dashForce,ForceMode2D.Impulse);
+            canDash = false;
+            Invoke(nameof(ResetDash),dashCoolDown);
+        }
+    }
+
+    private void ResetDash()
+    {
+        canDash = true;
     }
 
     public void SetUp(float f)
