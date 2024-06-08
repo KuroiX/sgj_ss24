@@ -10,7 +10,8 @@ namespace IntroCutScene
         private void OnTriggerEnter2D(Collider2D other)
         {
             if (!other.CompareTag("Drop")) return;
-            onDropsCollided?.Invoke();
+            
+            FindObjectOfType<SceneLoader>().LoadNextScene();
         }
     }
 }

@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using IntroCutScene;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -20,19 +22,20 @@ public class PlayerClass : MonoBehaviour
         
         if (isTutorial)
         {
+            
             //BlobController[] blobControllers = FindObjectsOfType<BlobController>();
             blobController = Instantiate(blobPrefab).GetComponent<BlobController>();
+            
+            blobController.StartBlob(); 
+            blobController.StopShrinking();
             if (FindObjectOfType<PlayerInputManager>().playerCount == 1)
             {
+                blobController.AddComponent<DetectDropMerge>();
                 _card = Instantiate(_card);
                 _card.cardActions = new List<CardAction>() {CardAction.Up, CardAction.Down};
                 //blobController = blobControllers[0];
-                
-                SceneManager.sceneLoaded += (arg0, mode) =>
-                {
-                    isTutorial = false;
-                    blobController = FindObjectOfType<BlobController>();
-                };
+
+                SceneManager.sceneLoaded += Subscriber;
                 
                 DontDestroyOnLoad(gameObject);
             }
@@ -43,15 +46,28 @@ public class PlayerClass : MonoBehaviour
                 _card.cardActions = new List<CardAction>() {CardAction.Left, CardAction.Right};
                 //blobController = blobControllers[1];
                 
-                SceneManager.sceneLoaded += (arg0, mode) =>
-                {
-                    isTutorial = false;
-                    blobController = FindObjectOfType<BlobController>();
-                };
-                
+                SceneManager.sceneLoaded += Subscriber;
+
                 DontDestroyOnLoad(gameObject);
             }
         }
+    }
+
+    private void Subscriber(Scene arg0, LoadSceneMode arg1)
+    {
+        isTutorial = false;
+        blobController = FindObjectOfType<BlobController>();
+
+        if (arg0.buildIndex == 0)
+        {
+            Unsubscriber();
+        }
+    }
+
+    private void Unsubscriber()
+    {
+        SceneManager.sceneLoaded -= Subscriber;
+        Destroy(gameObject);
     }
 
     public void StartGame(InputAction.CallbackContext obj)
@@ -70,7 +86,10 @@ public class PlayerClass : MonoBehaviour
 
     public void ActionOnperformedMove(InputAction.CallbackContext obj)
     {
+       Debug.Log("move");
        Vector2 input = obj.ReadValue<Vector2>();
+
+       float schranke = 0.1f;
 
        foreach (var cardAction in _card.cardActions)
        {
@@ -78,19 +97,19 @@ public class PlayerClass : MonoBehaviour
            {
                case CardAction.Up:
                    if(input.y >= 0)
-                       blobController.SetUp(input.y);
+                       blobController.SetUp(input.y > schranke ? input.y : 0);
                    break;
                case CardAction.Down:
                    if(input.y < 0)
-                       blobController.SetDown(input.y);
+                       blobController.SetDown(input.y < -schranke ? input.y : 0);
                    break;
                case CardAction.Right:
                    if(input.x >= 0)
-                       blobController.SetRight(input.x);
+                       blobController.SetRight(input.x > schranke ? input.x : 0);
                    break;
                case CardAction.Left:
                    if(input.x < 0)
-                       blobController.SetLeft(input.x);
+                       blobController.SetLeft(input.x < -schranke ? input.x : 0);
                    break;
            }
        }

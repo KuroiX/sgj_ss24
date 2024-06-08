@@ -9,9 +9,9 @@ EditorBuildSettings:
     path: Assets/GamejamUtility/main_menu.unity
     guid: 6b5ae4df258dfd24cb57cb041d265a80
   - enabled: 1
-    path: Assets/Scenes/FinalScene.unity
-    guid: 173be104c394e5847bec21b408a088b3
+    path: Assets/Scenes/Old/Lobby.unity
+    guid: 58b0e4da111e63b46a40148b5864f23d
   - enabled: 1
-    path: Assets/Scenes/KerstinTest.unity
-    guid: 3cc77c84e6fc87841b174255dd58ef53
+    path: Assets/Scenes/Old/FinalScene.unity
+    guid: 173be104c394e5847bec21b408a088b3
   m_configObjects: {}

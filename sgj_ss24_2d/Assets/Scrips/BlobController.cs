@@ -140,24 +140,28 @@ public class BlobController : MonoBehaviour
 
     public void SetUp(float f)
     {
+        Debug.Log("up");
         _upInput = Mathf.Clamp01(Mathf.Abs(f));
         _downInput = 0;
     }
 
     public void SetDown(float f)
     {
+        Debug.Log("down");
         _downInput = Mathf.Clamp01(Mathf.Abs(f));
         _upInput = 0;
     }
 
     public void SetRight(float f)
     {
+        Debug.Log("right");
         _rightInput = Mathf.Clamp01(Mathf.Abs(f));
         _leftInput = 0;
     }
 
     public void SetLeft(float f)
     {
+        Debug.Log("left");
         _leftInput = Mathf.Clamp01(Mathf.Abs(f));
         _rightInput = 0;
     }

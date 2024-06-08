@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Cinemachine;
 using Dialogue;
 using TMPro;
@@ -49,13 +50,14 @@ public class GameLoop : MonoBehaviour
 
     private void Start()
     {
-        players = new List<PlayerClass>();
-        playerInputManager.onPlayerJoined += OnPlayerJoined;
+        players = FindObjectsOfType<PlayerClass>().Reverse().ToList();
+        //playerInputManager.onPlayerJoined += OnPlayerJoined;
         _gameLoopStarted = false;
     }
 
     public void StartGameLoop()
     {
+        Debug.Log(" start before ");
         if (players.Count < 2) return;
         
         Debug.Log("start");
