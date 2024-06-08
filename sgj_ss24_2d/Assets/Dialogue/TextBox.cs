@@ -1,17 +1,16 @@
 ﻿using System;
 using DG.Tweening;
-using TMPro;
 using UnityEngine;
-using UnityEngine.UIElements;
+using TMPro;
+using UnityEngine.UI;
 
 namespace Dialogue
 {
     public class TextBox : MonoBehaviour
     {
-        [Header("Points")] [SerializeField] private Transform belowScreenPoint;
-
-        [Header("Animation Properties")] [SerializeField]
-        private float duration = 1;
+        [SerializeField] private Transform belowScreenPoint;
+        [SerializeField] private Image imageComponent;
+        [SerializeField] private float duration = 1;
 
         // private properties
         private DOTweenAnimation _doTweenAnimation;
@@ -40,20 +39,27 @@ namespace Dialogue
             return duration;
         }
 
-        public void DisplayTextBox(string text)
+        public void DisplayTextBox(string text, Sprite icon)
         {
             SetText(text);
+            SetIcon(icon);
             MoveUp();
         }
-        
+
         public void HideTextBox()
         {
             MoveDown();
-            
+
             // clear text when animation has finished
             Invoke(nameof(ClearText), duration);
         }
-        
+
+        // ICON
+        private void SetIcon(Sprite icon)
+        {
+            imageComponent.overrideSprite = icon;
+        }
+
 
         // TEXT
         private void SetText(string text)

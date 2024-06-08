@@ -29,7 +29,7 @@ namespace Dialogue
         [ContextMenu("show voice line")]
         public void ShowVoiceLine(VoiceLine voiceLine)
         {
-            textBox.DisplayTextBox(voiceLine.textLine);
+            textBox.DisplayTextBox(voiceLine.textLine, voiceLine.icon);
             AudioClip currentClip = voiceLine.audioClip;
             _audioSource.clip = currentClip;
 
