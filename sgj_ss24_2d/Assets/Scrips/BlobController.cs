@@ -19,12 +19,13 @@ public class BlobController : MonoBehaviour
     public float dashCoolDown = 3;
     [Header("Other")]
     public float shrinkFactor;
-   
-
+    
     private float _upInput;
     private float _downInput;
     private float _rightInput;
     private float _leftInput;
+
+    private bool doSomething = true;
 
     private Vector2 _velocity;
 
@@ -39,6 +40,8 @@ public class BlobController : MonoBehaviour
 
     private void Update()
     {
+        if(!doSomething)return;
+        
         ShrinkBlob();
 
         if (IsDeath())
@@ -49,17 +52,11 @@ public class BlobController : MonoBehaviour
     {
         Move();
     }
-
-    private void ResetInput()
-    {
-        _upInput = 0;
-        _downInput = 0;
-        _rightInput = 0;
-        _leftInput = 0;
-    }
     
     private void Move()
     {
+        if(!doSomething)return;
+        
         Vector2 moveDir = CalculateDir();
 
         float currSpeed = Mathf.Lerp(minSpeed, maxSpeed,
@@ -86,7 +83,7 @@ public class BlobController : MonoBehaviour
     private Vector2 CalculateDir()
     {
         var vec = new Vector2(_rightInput - _leftInput, _upInput - _downInput);
-        return vec.normalized;
+        return vec.magnitude > 1 ? vec.normalized : vec;
     }
 
     private bool IsDeath()
@@ -103,6 +100,16 @@ public class BlobController : MonoBehaviour
             canDash = false;
             Invoke(nameof(ResetDash),dashCoolDown);
         }
+    }
+
+    public void StopBlob()
+    {
+        doSomething = false;
+    }
+
+    public void StartBlob()
+    {
+        doSomething = true;
     }
 
     private void ResetDash()
