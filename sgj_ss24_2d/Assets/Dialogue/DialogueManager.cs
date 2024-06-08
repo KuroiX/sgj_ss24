@@ -29,6 +29,7 @@ namespace Dialogue
         [ContextMenu("show voice line")]
         public void ShowVoiceLine(VoiceLine voiceLine)
         {
+           
             textBox.DisplayTextBox(voiceLine.textLine, voiceLine.icon);
             AudioClip currentClip = voiceLine.audioClip;
             _audioSource.clip = currentClip;
@@ -49,6 +50,7 @@ namespace Dialogue
 
         private void ResetAll()
         {
+            Debug.Log("resetting box and clip");
             textBox.HideTextBox();
             _audioSource.clip = null;
         }

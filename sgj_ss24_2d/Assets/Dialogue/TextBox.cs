@@ -47,10 +47,11 @@ namespace Dialogue
 
         public void HideTextBox()
         {
+            Debug.Log("clear");
             MoveDown();
 
             // clear text when animation has finished
-            Invoke(nameof(ClearText), duration);
+            //Invoke(nameof(ClearText), duration);
         }
 
         // ICON

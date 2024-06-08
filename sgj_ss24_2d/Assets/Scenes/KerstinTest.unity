@@ -220,7 +220,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73441d708d4f3344fa6abb071f21b5da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 0.5
+  initialWaterStorage: 0
+  shrinkSubtrahent: {fileID: 0}
 --- !u!58 &186176799
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -459,7 +460,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73441d708d4f3344fa6abb071f21b5da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 0.5
+  initialWaterStorage: 0
+  shrinkSubtrahent: {fileID: 0}
 --- !u!212 &251134854
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -593,7 +595,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73441d708d4f3344fa6abb071f21b5da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 0.5
+  initialWaterStorage: 0
+  shrinkSubtrahent: {fileID: 0}
 --- !u!212 &516260945
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -850,7 +853,8 @@ MonoBehaviour:
   maxSpeed: 0.5
   dashForce: 10
   dashCoolDown: 3
-  shrinkFactor: 0.2
+  initialWaterStorage: 0
+  shrinkSubtrahent: {fileID: 0}
 --- !u!50 &873841122
 Rigidbody2D:
   serializedVersion: 4
@@ -979,7 +983,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73441d708d4f3344fa6abb071f21b5da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 0.5
+  initialWaterStorage: 0
+  shrinkSubtrahent: {fileID: 0}
 --- !u!212 &1076540014
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1255,7 +1260,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73441d708d4f3344fa6abb071f21b5da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 0.5
+  initialWaterStorage: 0
+  shrinkSubtrahent: {fileID: 0}
 --- !u!58 &1952744355
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1490,6 +1496,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2070661528}
+    - target: {fileID: 6499636158083079184, guid: 3321b7fdf699830449dacf2d21e1fe60, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 11400000, guid: a12f5f50908ef364d8dddd26efbaa821, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
