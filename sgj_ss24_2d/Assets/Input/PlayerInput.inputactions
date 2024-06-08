@@ -38,6 +38,17 @@
                 },
                 {
                     "name": "",
+                    "id": "967c2b1c-9eef-4739-8690-5c8f1dc2f12a",
+                    "path": "<Gamepad>/dpad",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PlayerOne",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "bec64b0e-fde2-4ab2-86ef-08511c610e85",
                     "path": "<Gamepad>/buttonSouth",
                     "interactions": "",

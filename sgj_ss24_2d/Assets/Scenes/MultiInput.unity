@@ -691,9 +691,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vCam: {fileID: 0}
-  players:
-  - {fileID: 0}
-  - {fileID: 0}
+  players: []
   stages:
   - cards:
     - {fileID: 11400000, guid: d1c7c1c22ed126c4bb626787c0985c26, type: 2}
@@ -704,6 +702,10 @@ MonoBehaviour:
     - {fileID: 11400000, guid: c45832a0f5c99c84da9c7f15174fe3cd, type: 2}
     time: 20
   timerText: {fileID: 959868932}
+  playerInputManager: {fileID: 712153224}
+  OnGameLoopStarted:
+    m_PersistentCalls:
+      m_Calls: []
   OnStageSwitch:
     m_PersistentCalls:
       m_Calls: []
@@ -850,7 +852,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 621567455fd1c4ceb811cc8a00b6a1a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_NotificationBehavior: 0
+  m_NotificationBehavior: 3
   m_MaxPlayerCount: -1
   m_AllowJoining: 1
   m_JoinBehavior: 0
