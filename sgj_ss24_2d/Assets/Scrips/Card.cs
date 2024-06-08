@@ -1,5 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
+using Image = UnityEngine.UI.Image;
 
 public enum CardAction
 {
@@ -13,4 +15,5 @@ public enum CardAction
 public class Card : ScriptableObject
 {
     public List<CardAction> cardActions;
+    public Texture2D image;
 }
