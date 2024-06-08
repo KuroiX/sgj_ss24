@@ -163,9 +163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vCam: {fileID: 1868075306}
-  players:
-  - {fileID: 0}
-  - {fileID: 0}
+  players: []
   stages:
   - cards:
     - {fileID: 11400000, guid: d1c7c1c22ed126c4bb626787c0985c26, type: 2}
@@ -179,7 +177,19 @@ MonoBehaviour:
   playerInputManager: {fileID: 413417425}
   OnGameLoopStarted:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2031734620}
+        m_TargetAssemblyTypeName: Rain, Assembly-CSharp
+        m_MethodName: StartRain
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnStageSwitch:
     m_PersistentCalls:
       m_Calls: []
@@ -519,7 +529,8 @@ MonoBehaviour:
   maxSpeed: 20
   dashForce: 10
   dashCoolDown: 3
-  shrinkFactor: 0.2
+  initialWaterStorage: 100
+  shrinkSubtrahent: {fileID: 11400000, guid: 35ad55da0d2a0f54aac3a8467ad9af0a, type: 2}
 --- !u!50 &873841122
 Rigidbody2D:
   serializedVersion: 4
@@ -1195,6 +1206,17 @@ MonoBehaviour:
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
+--- !u!114 &2031734620 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2923779782681607000, guid: 51641b43b1e36fb4a913c150730f1511, type: 3}
+  m_PrefabInstance: {fileID: 791558412}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c332f7a7a819f8948a139b5dff20a031, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6317432842221619905
 PrefabInstance:
   m_ObjectHideFlags: 0
