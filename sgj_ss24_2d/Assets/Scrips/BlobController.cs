@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.Dependencies.NCalc;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
@@ -17,8 +18,10 @@ public class BlobController : MonoBehaviour
     [Header("Dash")]
     public float dashForce = 10;
     public float dashCoolDown = 3;
-    [Header("Other")]
-    public float shrinkFactor;
+    [Header("Other")] 
+    public float initialWaterStorage;
+    public SubtrahentSO shrinkSubtrahent;
+    //public float shrinkFactor;
    
 
     private float _upInput;
@@ -31,10 +34,13 @@ public class BlobController : MonoBehaviour
     private Rigidbody2D _rigidbody2D;
     private bool canDash = true;
 
+    private float _currentWaterStorage;
+
     private void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
         transform.localScale = new Vector3(maxScale, maxScale, maxScale);
+        _currentWaterStorage = initialWaterStorage;
     }
 
     private void Update()
@@ -71,16 +77,16 @@ public class BlobController : MonoBehaviour
 
     public void DropCollected(float value)
     {
-        transform.localScale += new Vector3(value, value, value);
+        _currentWaterStorage += value;
+        transform.localScale = new Vector3(1, 1, 1) * _currentWaterStorage / initialWaterStorage;
     }
 
     private void ShrinkBlob()
     {
-        float subtrator = shrinkFactor * Time.deltaTime;
-        Vector3 currScale = transform.localScale;
-        Vector3 newScale = new Vector3(currScale.x - subtrator, currScale.y - subtrator,
-            currScale.z - subtrator);
-        transform.localScale = newScale;
+        if (_currentWaterStorage <= 0.05) return;
+        
+        _currentWaterStorage -= shrinkSubtrahent.shringkSubtrahent * Time.deltaTime;
+        transform.localScale = new Vector3(1, 1, 1) * _currentWaterStorage / initialWaterStorage;
     }
 
     private Vector2 CalculateDir()
