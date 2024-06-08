@@ -3,18 +3,46 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 
 public class PlayerClass : MonoBehaviour
 {
     [SerializeField] private BlobController blobController;
     [SerializeField] private Card _card;
-
+    [SerializeField] private bool isTutorial;
     private bool started;
     
     private void Awake()
     {
         blobController = FindObjectOfType<BlobController>();
+        
+        if (isTutorial)
+        {
+            BlobController[] blobControllers = FindObjectsOfType<BlobController>();
+            if (FindObjectOfType<PlayerInputManager>().playerCount == 1)
+            {
+                _card = Instantiate(_card);
+                _card.cardActions = new List<CardAction>() {CardAction.Up, CardAction.Down};
+                blobController = blobControllers[0];
+                
+                SceneManager.sceneLoaded += (arg0, mode) =>
+                {
+                    isTutorial = false;
+                    blobController = FindObjectOfType<BlobController>();
+                };
+                
+                DontDestroyOnLoad(gameObject);
+            }
+            
+            if (FindObjectOfType<PlayerInputManager>().playerCount == 2)
+            {
+                _card = Instantiate(_card);
+                _card.cardActions = new List<CardAction>() {CardAction.Left, CardAction.Right};
+                blobController = blobControllers[1];
+                
+            }
+        }
     }
 
     public void StartGame(InputAction.CallbackContext obj)
@@ -22,7 +50,13 @@ public class PlayerClass : MonoBehaviour
         if (started) return;
         
         started = true;    
-        FindObjectOfType<GameLoop>().StartGameLoop();
+        if(!isTutorial)
+            FindObjectOfType<GameLoop>().StartGameLoop();
+        else
+        {
+            blobController.StartBlob(); 
+            blobController.StopShrinking();
+        }
     }
 
     public void ActionOnperformedMove(InputAction.CallbackContext obj)

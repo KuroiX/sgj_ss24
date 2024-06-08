@@ -4,25 +4,22 @@ using System.Collections.Generic;
 using Unity.VisualScripting.Dependencies.NCalc;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class BlobController : MonoBehaviour
 {
-    [Header("Scale")]
-    public float minScale = 0.1f;
+    [Header("Scale")] public float minScale = 0.1f;
     public float maxScale = 2;
-    [Header("Speed")]
-    public float minSpeed;
+    [Header("Speed")] public float minSpeed;
     public float maxSpeed;
-    [Header("Dash")]
-    public float dashForce = 10;
+    [Header("Dash")] public float dashForce = 10;
     public float dashCoolDown = 3;
-    [Header("Other")] 
-    public float initialWaterStorage;
+    [Header("Other")] public float initialWaterStorage;
     public SubtrahentSO shrinkSubtrahent;
     //public float shrinkFactor;
-   
+
 
     private float _upInput;
     private float _downInput;
@@ -30,6 +27,7 @@ public class BlobController : MonoBehaviour
     private float _leftInput;
 
     private bool doSomething = true;
+    private bool canShrink = true;
 
     private Vector2 _velocity;
 
@@ -48,8 +46,8 @@ public class BlobController : MonoBehaviour
 
     private void Update()
     {
-        if(!doSomething) return;
-        
+        if (!doSomething) return;
+
         ShrinkBlob();
 
         if (IsDeath())
@@ -60,11 +58,11 @@ public class BlobController : MonoBehaviour
     {
         Move();
     }
-    
+
     private void Move()
     {
-        if(!doSomething)return;
-        
+        if (!doSomething) return;
+
         Vector2 moveDir = CalculateDir();
 
         float currSpeed = Mathf.Lerp(minSpeed, maxSpeed,
@@ -82,6 +80,7 @@ public class BlobController : MonoBehaviour
 
     private void ShrinkBlob()
     {
+        if (!canShrink) return;
         if (_currentWaterStorage <= 0.05)
         {
             FindObjectOfType<GameLoop>().GameOver();
@@ -108,9 +107,9 @@ public class BlobController : MonoBehaviour
         if (canDash)
         {
             var vec = CalculateDir();
-            _rigidbody2D.AddForce(vec * dashForce,ForceMode2D.Impulse);
+            _rigidbody2D.AddForce(vec * dashForce, ForceMode2D.Impulse);
             canDash = false;
-            Invoke(nameof(ResetDash),dashCoolDown);
+            Invoke(nameof(ResetDash), dashCoolDown);
         }
     }
 
@@ -122,6 +121,16 @@ public class BlobController : MonoBehaviour
     public void StartBlob()
     {
         doSomething = true;
+    }
+    
+    public void StopShrinking()
+    {
+        canShrink = false;
+    }
+
+    public void StartShrinking()
+    {
+        canShrink = true;
     }
 
     private void ResetDash()
@@ -151,5 +160,11 @@ public class BlobController : MonoBehaviour
     {
         _leftInput = Mathf.Clamp01(Mathf.Abs(f));
         _rightInput = 0;
+    }
+
+    [ContextMenu("loadeShit")]
+    private void LoadeFinalScene()
+    {
+        SceneManager.LoadScene("FinalScene");
     }
 }
