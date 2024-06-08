@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
+using Dialogue;
 using TMPro;
 using UnityEditor.Rendering;
 using UnityEngine;
@@ -16,6 +17,8 @@ public class Stage
     public int time;
     public UnityEvent OnStageEnter;
 
+    public VoiceLine voiceLine;
+
     public void TriggerStageEnter()
     {
         OnStageEnter.Invoke();
@@ -24,6 +27,11 @@ public class Stage
 
 public class GameLoop : MonoBehaviour
 {
+    public UnityEvent StopEverything;
+    public UnityEvent StartEverything;
+
+    public DialogueManager dialogueManager;
+
     //TODO change class
     [SerializeField] private CinemachineVirtualCamera vCam;
     [SerializeField] private List<PlayerClass> players;
@@ -47,14 +55,23 @@ public class GameLoop : MonoBehaviour
     public void StartGameLoop()
     {
         if (players.Count < 2) return;
+        
         Debug.Log("start");
         _currentStage = 0;
-        _currentTime = stages[_currentStage].time;
+        EnterStage();
         UpdateTimer(_currentTime);
         SetPlayerCards(_currentStage);
         OnStageSwitch.AddListener(SwitchStage);
         _gameLoopStarted = true;
         OnGameLoopStarted.Invoke();
+    }
+
+    private void EnterStage()
+    {
+        _currentTime = stages[_currentStage].time;
+        stages[_currentStage].TriggerStageEnter();
+        dialogueManager.ShowVoiceLine(stages[_currentStage].voiceLine);
+        SetPlayerCards(_currentStage);
     }
 
     private void OnPlayerJoined(PlayerInput obj)
@@ -74,7 +91,7 @@ public class GameLoop : MonoBehaviour
 
     private void Update()
     {
-        if(!_gameLoopStarted) return;
+        if(!_gameLoopStarted || gameOver) return;
         
         _currentTime -= Time.deltaTime;
         UpdateTimer(_currentTime);
@@ -84,9 +101,11 @@ public class GameLoop : MonoBehaviour
         }
     }
 
-    private void GameOver()
+    public void GameOver()
     {
-        
+        gameOver = true;
+        FindObjectOfType<WinLoosUi>().DisplayLoosUI();
+        StartCoroutine(GoToMainMenu());
     }
 
     private void UpdateTimer(float time)
@@ -104,23 +123,31 @@ public class GameLoop : MonoBehaviour
         }
     }
 
+    private bool gameOver;
+
     [ContextMenu("Switch Stage")]
     public void SwitchStage()
     {
-        if (_currentStage >= stages.Count - 1)
+        if (_currentStage >= stages.Count - 1 && !gameOver)
         {
+            gameOver = true;
             Debug.Log("YOU WIN");
-            FindObjectOfType<SceneLoader>().LoadNextScene();
+            FindObjectOfType<WinLoosUi>().DisplayWinnUI();
+            StartCoroutine(GoToMainMenu());
             return;
         }
         
         _currentStage++;
-        _currentTime = stages[_currentStage].time;
-        stages[_currentStage].TriggerStageEnter();
-        SetPlayerCards(_currentStage);
+        EnterStage();
+        //TriggerCutscene();
     }
 
-    [ContextMenu("TriggerCutscene")]
+    private IEnumerator GoToMainMenu()
+    {
+        yield return new WaitForSeconds(5);
+        FindObjectOfType<SceneLoader>().LoadNextScene();
+    }
+
     public void TriggerCutscene()
     {
         StartCoroutine(CutsceneEnumerator());
@@ -129,9 +156,12 @@ public class GameLoop : MonoBehaviour
     private IEnumerator CutsceneEnumerator()
     {
         vCam.Priority = 10;
-        yield return new WaitForSeconds(10);
+        StopEverything.Invoke();
+        yield return new WaitForSeconds(2);
+        StartEverything.Invoke();
         //trigger cutscene
         //disable character input;
         vCam.Priority = 0;
+        EnterStage();
     }
 }

@@ -10,7 +10,7 @@ public class PlayerClass : MonoBehaviour
     [SerializeField] private BlobController blobController;
     [SerializeField] private Card _card;
 
-    private static bool started;
+    private bool started;
     
     private void Awake()
     {
