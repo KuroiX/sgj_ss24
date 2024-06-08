@@ -68,6 +68,11 @@ public class GameLoop : MonoBehaviour
         }
     }
 
+    private void GameOver()
+    {
+        
+    }
+
     private void UpdateTimer(float time)
     {
         timerText.text = "Time: " + (int)time;
