@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: DroppyLine 2
   m_EditorClassIdentifier: 
   audioClip: {fileID: 0}
-  icon: {fileID: 21300000, guid: f14395c148bd91a43b7b89f6c03c9ee4, type: 3}
+  icon: {fileID: 21300000, guid: a8cf7fa13bf3137448327737a3da3a41, type: 3}
   textLine: Oh, wow, this guy seems stressed out. The heat is already starting to
     evaporate me. I need to find and CONNECT with other droplets to survive!

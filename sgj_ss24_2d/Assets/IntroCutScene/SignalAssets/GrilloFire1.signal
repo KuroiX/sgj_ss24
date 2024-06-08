@@ -9,9 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3debef488e6d4d869d2063b9099f121e, type: 3}
-  m_Name: GrilloLine 1
+  m_Script: {fileID: 11500000, guid: d6fa2d92fc1b3f34da284357edf89c3b, type: 3}
+  m_Name: GrilloFire1
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 0}
-  icon: {fileID: 21300000, guid: 60ada237ba811d741b9964e72b5874a6, type: 3}
-  textLine: Perish, puny little droplet! Only I will prevail!

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: GrilloLine 0
   m_EditorClassIdentifier: 
   audioClip: {fileID: 0}
-  icon: {fileID: 21300000, guid: 6409f0d9b2a809c41bc93e0a3718657d, type: 3}
+  icon: {fileID: 21300000, guid: f54fba99c7c66a242adaf804cdbe24dd, type: 3}
   textLine: Rain? Not again. I hate rain!
