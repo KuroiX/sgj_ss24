@@ -37,7 +37,6 @@ namespace IntroCutScene
 
         private void FadeInNext()
         {
-            Debug.Log($"current index: {_currentIndex}");
             if (_currentIndex == _numberOfSprites - 1)
             {
                 CancelInvoke(nameof(FadeInNext));
