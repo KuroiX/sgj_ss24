@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using TMPro;
 using UnityEditor.Rendering;
 using UnityEngine;
@@ -17,12 +18,13 @@ public class Stage
 public class GameLoop : MonoBehaviour
 {
     //TODO change class
+    [SerializeField] private CinemachineVirtualCamera vCam;
     [SerializeField] private List<PlayerClass> players;
     [SerializeField] private List<Stage> stages;
     [SerializeField] private TextMeshProUGUI timerText;
     private int _currentStage;
     private float _currentTime;
-
+    
     public UnityEvent OnStageSwitch;
 
     private void Start()
@@ -71,5 +73,20 @@ public class GameLoop : MonoBehaviour
         _currentStage++;
         _currentTime = stages[_currentStage].time;
         SetPlayerCards(_currentStage);
+    }
+
+    [ContextMenu("TriggerCutscene")]
+    public void TriggerCutscene()
+    {
+        StartCoroutine(CutsceneEnumerator());
+    }
+
+    private IEnumerator CutsceneEnumerator()
+    {
+        vCam.Priority = 10;
+        yield return new WaitForSeconds(10);
+        //trigger cutscene
+        //disable character input;
+        vCam.Priority = 0;
     }
 }
