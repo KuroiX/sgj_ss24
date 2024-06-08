@@ -43,7 +43,9 @@ namespace IntroCutScene
                 return;
             }
             
+            Debug.Log($"enabling nr {_currentIndex}: {spriteObjects[_currentIndex]}");
             spriteObjects[_currentIndex].SetActive(true);
+            Debug.Log(spriteObjects[_currentIndex].activeSelf);
             _currentIndex++;
         }
     }

@@ -542,7 +542,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &353081587
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2218,7 +2218,7 @@ MonoBehaviour:
           m_MethodName: ShowVoiceLine
           m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 11400000, guid: 31738721f7b61ff43815d3d6cabe2498, type: 2}
+            m_ObjectArgument: {fileID: 11400000, guid: 05af76b6b1af82c43af59e190f0aa3ee, type: 2}
             m_ObjectArgumentAssemblyTypeName: Dialogue.VoiceLine, Assembly-CSharp
             m_IntArgument: 0
             m_FloatArgument: 0
@@ -2587,7 +2587,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: f14395c148bd91a43b7b89f6c03c9ee4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2895,7 +2895,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 5bdbb668e3aca5f45802523083009020, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

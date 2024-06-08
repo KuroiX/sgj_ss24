@@ -12,13 +12,13 @@ namespace IntroCutScene
         private int _currentIndex;
         private int _numberOfSprites;
 
-        private void Start()
+        private void Awake()
         {
             _numberOfSprites = spriteObjects.Length;
             _currentIndex = 0;
             if (_numberOfSprites < 2) return;
 
-            DisableAllButFirst();
+            DisableAllButOne();
         }
 
         public void StartShuffling()
@@ -31,10 +31,11 @@ namespace IntroCutScene
             CancelInvoke(nameof(ShuffleSprites));
         }
 
-        private void DisableAllButFirst()
+        private void DisableAllButOne()
         {
-            for (int i = 1; i < _numberOfSprites; i++)
+            for (int i = 0; i < _numberOfSprites; i++)
             {
+                if (i == indexOfFirstActiveSprite) continue;
                 spriteObjects[i].SetActive(false);
             }
         }
