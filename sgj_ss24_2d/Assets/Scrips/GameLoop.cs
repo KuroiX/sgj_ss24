@@ -14,6 +14,12 @@ public class Stage
 {
     public List<Card> cards;
     public int time;
+    public UnityEvent OnStageEnter;
+
+    public void TriggerStageEnter()
+    {
+        OnStageEnter.Invoke();
+    }
 }
 
 public class GameLoop : MonoBehaviour
@@ -33,8 +39,8 @@ public class GameLoop : MonoBehaviour
 
     private void Start()
     {
-        playerInputManager.onPlayerJoined += OnPlayerJoined;
         players = new List<PlayerClass>();
+        playerInputManager.onPlayerJoined += OnPlayerJoined;
         _gameLoopStarted = false;
     }
 
@@ -105,6 +111,7 @@ public class GameLoop : MonoBehaviour
         
         _currentStage++;
         _currentTime = stages[_currentStage].time;
+        stages[_currentStage].TriggerStageEnter();
         SetPlayerCards(_currentStage);
     }
 
