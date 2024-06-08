@@ -15,12 +15,12 @@ public class CoalSpawner : MonoBehaviour
     public GameObject coalPrefab;
 
     [ContextMenu("Spawn coal")]
-    public void ASDF()
+    public void SpawnCoal()
     {
-        StartCoroutine(SpawnCoal());
+        StartCoroutine(SpawnCoalRoutine());
     }
     
-    private IEnumerator SpawnCoal()
+    private IEnumerator SpawnCoalRoutine()
     {
         float time = Random.Range(minTime, maxTime);
 
@@ -46,7 +46,7 @@ public class CoalSpawner : MonoBehaviour
                 (new Vector3(randomX2, -height, 0) - new Vector3(randomX, height, 0));
         }
         
-        ASDF();
+        SpawnCoal();
     }
     
 }
