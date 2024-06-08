@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class AnimationHandler : MonoBehaviour
 {
-    public float speed;
     private Animator _animator;
     private SpriteRenderer _spriteRenderer;
+    public Rigidbody2D rigidbody;
 
     private void Start()
     {
@@ -17,11 +17,11 @@ public class AnimationHandler : MonoBehaviour
 
     void Update()
     {
-        float horizontal = Input.GetAxisRaw("Horizontal");
-        float vertical = Input.GetAxisRaw("Vertical");
-      
-        transform.position += new Vector3(horizontal, vertical, 0).normalized * speed * Time.deltaTime;
+        var vel = rigidbody.velocity;
 
+        float horizontal = vel.x;
+        float vertical = vel.y;
+      
         ResetAll();
         
         if(horizontal < 0)

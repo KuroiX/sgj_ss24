@@ -25,10 +25,10 @@ public class ObstacleSpawner : MonoBehaviour
 
     private void Update()
     {
-        Debug.DrawLine(new Vector3(-width, height, 0), new Vector3(width, height, 0));
-        Debug.DrawLine(new Vector3(-width, -height, 0), new Vector3(width, -height, 0));
-        Debug.DrawLine(new Vector3(-width, height, 0), new Vector3(-width, -height, 0));
-        Debug.DrawLine(new Vector3(width, height, 0), new Vector3(width, -height, 0));
+        Debug.DrawLine(new Vector3(-width + transform.position.x, height + transform.position.y, 0), new Vector3(width + transform.position.x, height + transform.position.y, 0));
+        Debug.DrawLine(new Vector3(-width + transform.position.x, -height + transform.position.y, 0), new Vector3(width + transform.position.x, -height + transform.position.y, 0));
+        Debug.DrawLine(new Vector3(-width + transform.position.x, height + transform.position.y, 0), new Vector3(-width + transform.position.x, -height + transform.position.y, 0));
+        Debug.DrawLine(new Vector3(width + transform.position.x, height + transform.position.y, 0), new Vector3(width + transform.position.x, -height + transform.position.y, 0));
     }
 
     [ContextMenu("Spawn Obstacle")]
@@ -36,15 +36,15 @@ public class ObstacleSpawner : MonoBehaviour
     {
         if (spawnedObstacles.Count >= maxNumberOfObstacles) return;
 
-        float randomX = Random.Range(-width, width);
-        float randomY = Random.Range(-height, height);
+        float randomX = Random.Range(-width + transform.position.x, width + transform.position.x);
+        float randomY = Random.Range(-height + transform.position.y, height + transform.position.y);
 
         var spawnPos = new Vector3(randomX, randomY, 0);
 
         while (!IsPositionValid(spawnPos))
         {
-            randomX = Random.Range(-width, width);
-            randomY = Random.Range(-height, height);
+            randomX = Random.Range(-width + transform.position.x, width + transform.position.x);
+            randomY = Random.Range(-height + transform.position.y, height + transform.position.y);
 
             spawnPos = new Vector3(randomX, randomY, 0);
         }
