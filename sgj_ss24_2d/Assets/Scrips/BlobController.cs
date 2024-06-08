@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class PlayerMovement : MonoBehaviour
+public class BlobController : MonoBehaviour
 {
     public float startScale = 2;
     public float minScale = 0.1f;
@@ -21,9 +21,6 @@ public class PlayerMovement : MonoBehaviour
 
     private Rigidbody2D _rigidbody2D;
 
-    public InputActionReference PlayerOne;
-    public InputActionReference PlayerTwo;
-
     private void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
@@ -31,8 +28,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        TestInput();
-
         ShrinkBlob();
 
         if (IsDeath())
@@ -44,34 +39,14 @@ public class PlayerMovement : MonoBehaviour
         Move();
     }
 
-    private void TestInput()
+    private void ResetInput()
     {
-        var v = PlayerOne.action.ReadValue<Vector2>();
-        if (v.x > 0)
-            SetRight(v.x);
-        if (v.y > 0)
-            SetUp(v.y);
-        if (v.x < 0)
-            SetLeft(v.x);
-        if (v.y < 0)
-            SetDown(v.y);
-
-        Debug.Log("P1:" + v);
-        
-        v = PlayerTwo.action.ReadValue<Vector2>();
-        if (v.x > 0)
-            SetRight(v.x);
-        if (v.y > 0)
-            SetUp(v.y);
-        if (v.x < 0)
-            SetLeft(v.x);
-        if (v.y < 0)
-            SetDown(v.y);
-        
-        
-        Debug.Log("P2:" + v);
+        _upInput = 0;
+        _downInput = 0;
+        _rightInput = 0;
+        _leftInput = 0;
     }
-
+    
     private void Move()
     {
         Vector2 moveDir = new Vector2(_rightInput - _leftInput, _upInput - _downInput);

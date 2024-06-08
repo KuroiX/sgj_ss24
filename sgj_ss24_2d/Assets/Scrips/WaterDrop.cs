@@ -9,7 +9,7 @@ public class WaterDrop : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D other)
     {
-        other.GetComponent<PlayerMovement>().DropCollected(value);
+        other.GetComponent<BlobController>().DropCollected(value);
         Destroy(gameObject);
     }
 }
