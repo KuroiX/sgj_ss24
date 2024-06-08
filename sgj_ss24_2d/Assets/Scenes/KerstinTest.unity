@@ -1333,11 +1333,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aac2cfb8bdaa4991a48b50e97f01f054, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!224 &203496498768892229 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 1804679081532789463, guid: 3321b7fdf699830449dacf2d21e1fe60, type: 3}
-  m_PrefabInstance: {fileID: 7424659306303366998}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4511470661429281423
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1487,33 +1482,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1804679081532789463, guid: 3321b7fdf699830449dacf2d21e1fe60, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -198
-      objectReference: {fileID: 0}
-    - target: {fileID: 2430892267960086318, guid: 3321b7fdf699830449dacf2d21e1fe60, type: 3}
-      propertyPath: endValueTransform
-      value: 
-      objectReference: {fileID: 203496498768892229}
-    - target: {fileID: 3117610731004037006, guid: 3321b7fdf699830449dacf2d21e1fe60, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -101
-      objectReference: {fileID: 0}
     - target: {fileID: 4354175832373411505, guid: 3321b7fdf699830449dacf2d21e1fe60, type: 3}
       propertyPath: m_Name
       value: Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 5602384127147038820, guid: 3321b7fdf699830449dacf2d21e1fe60, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5602384127147038820, guid: 3321b7fdf699830449dacf2d21e1fe60, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5602384127147038820, guid: 3321b7fdf699830449dacf2d21e1fe60, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -91
       objectReference: {fileID: 0}
     - target: {fileID: 6499636158083079184, guid: 3321b7fdf699830449dacf2d21e1fe60, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
