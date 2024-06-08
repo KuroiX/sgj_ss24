@@ -6,6 +6,7 @@ using TMPro;
 using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.InputSystem;
 using UnityEngine.PlayerLoop;
 
 [Serializable]
@@ -22,28 +23,54 @@ public class GameLoop : MonoBehaviour
     [SerializeField] private List<PlayerClass> players;
     [SerializeField] private List<Stage> stages;
     [SerializeField] private TextMeshProUGUI timerText;
+    [SerializeField] private PlayerInputManager playerInputManager;
     private int _currentStage;
     private float _currentTime;
-    
+    private bool _gameLoopStarted;
+
+    public UnityEvent OnGameLoopStarted;
     public UnityEvent OnStageSwitch;
 
     private void Start()
+    {
+        playerInputManager.onPlayerJoined += OnPlayerJoined;
+        _gameLoopStarted = false;
+    }
+
+    private void StartGameLoop()
     {
         _currentStage = 0;
         _currentTime = stages[_currentStage].time;
         UpdateTimer(_currentTime);
         SetPlayerCards(_currentStage);
         OnStageSwitch.AddListener(SwitchStage);
+        _gameLoopStarted = true;
+        OnGameLoopStarted.Invoke();
+    }
+
+    private void OnPlayerJoined(PlayerInput obj)
+    {
+        Debug.Log("ASDFASDFASDF");
+        players.Add(obj.gameObject.GetComponent<PlayerClass>());
+        if(players.Count >= 2) 
+            StartGameLoop();
     }
 
     private void Update()
     {
+        if(!_gameLoopStarted) return;
+        
         _currentTime -= Time.deltaTime;
         UpdateTimer(_currentTime);
         if (_currentTime <= 0)
         {
             OnStageSwitch.Invoke();
         }
+    }
+
+    private void GameOver()
+    {
+        
     }
 
     private void UpdateTimer(float time)

@@ -7,18 +7,16 @@ using UnityEngine.Serialization;
 
 public class PlayerClass : MonoBehaviour
 {
-    [SerializeField] private InputActionReference inputActionMove;
-    [SerializeField] private InputActionReference inputActionDash;
     [SerializeField] private BlobController blobController;
-    private Card _card;
-    
-    private void Start()
+    [SerializeField] private Card _card;
+
+
+    private void Awake()
     {
-        inputActionMove.action.performed += ActionOnperformedMove;
-        inputActionDash.action.performed += ActionOnperformedDash;
+        blobController = FindObjectOfType<BlobController>();
     }
 
-    private void ActionOnperformedMove(InputAction.CallbackContext obj)
+    public void ActionOnperformedMove(InputAction.CallbackContext obj)
     {
        Vector2 input = obj.ReadValue<Vector2>();
 
@@ -46,7 +44,7 @@ public class PlayerClass : MonoBehaviour
        }
     }
     
-    private void ActionOnperformedDash(InputAction.CallbackContext obj)
+    public void ActionOnperformedDash(InputAction.CallbackContext obj)
     {
       blobController.Dash();
     }
