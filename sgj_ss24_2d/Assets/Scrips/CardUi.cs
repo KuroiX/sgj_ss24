@@ -17,6 +17,8 @@ public class CardUi : MonoBehaviour
     [SerializeField] private DOTweenAnimation swapR2LAnimation;
 
 
+    private RectTransform currentCardL;
+    private RectTransform currentCardR;
     private void Update()
     {
         // TODO TEST:
@@ -34,9 +36,29 @@ public class CardUi : MonoBehaviour
         }
     }
 
-    public void CreateNewUICards()
+    public void CreateNewUICards(RectTransform cardPrefabL,RectTransform cardPrefabR)
     {
         
+        if(currentCardL != null)
+            PlayOutUpLeft(currentCardL);
+        if(currentCardR != null)
+            PlayOutUpRight(currentCardR);
+        
+        currentCardL = Instantiate(cardPrefabL, Vector3.zero, quaternion.identity);
+        currentCardR = Instantiate(cardPrefabR, Vector3.zero, quaternion.identity);
+        
+        PlayInUpLeft(currentCardL);
+        PlayInUpRight(currentCardR);
+    }
+
+    public void SwapTheCards()
+    {
+        if(currentCardL != null)
+            PlaySwapLToR(currentCardL);
+        if(currentCardR != null)
+            PlaySwapRToL(currentCardR);
+        
+        (currentCardL, currentCardR) = (currentCardR, currentCardL);
     }
 
     private void PlayInUpLeft(RectTransform transform)
@@ -90,21 +112,12 @@ public class CardUi : MonoBehaviour
     {
         instance1 = Instantiate(cardPre, Vector3.zero, quaternion.identity);
         instance2 = Instantiate(cardPre, Vector3.zero, quaternion.identity);
-        PlayInUpLeft(instance1);
-        PlayInUpRight(instance2);
+       CreateNewUICards(instance1,instance2);
     }
     [ContextMenu(nameof(TestAnis2))]
     public void TestAnis2()
     {
-        PlayOutUpLeft(instance1);
-        PlayOutUpRight(instance2);
-        
-        instance1 = Instantiate(cardPre, Vector3.zero, quaternion.identity);
-        instance2 = Instantiate(cardPre, Vector3.zero, quaternion.identity);
-        
-        PlayInUpLeft(instance1);
-        PlayInUpRight(instance2);
-        
+        SwapTheCards();
     }
     [ContextMenu(nameof(TestAnis3))]
     public void TestAnis3()
