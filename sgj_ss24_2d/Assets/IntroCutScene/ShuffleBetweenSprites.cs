@@ -19,8 +19,16 @@ namespace IntroCutScene
             if (_numberOfSprites < 2) return;
 
             DisableAllButFirst();
-            
+        }
+
+        public void StartShuffling()
+        {
             InvokeRepeating(nameof(ShuffleSprites), timeBeforeShuffleStarts, timeBetweenShuffles);
+        }
+
+        public void StopShuffling()
+        {
+            CancelInvoke(nameof(ShuffleSprites));
         }
 
         private void DisableAllButFirst()
@@ -35,7 +43,7 @@ namespace IntroCutScene
         {
             // disable old
             spriteObjects[_currentIndex].SetActive(false);
-            
+
             // enable new
             _currentIndex = (_currentIndex + 1) % _numberOfSprites;
             spriteObjects[_currentIndex].SetActive(true);
