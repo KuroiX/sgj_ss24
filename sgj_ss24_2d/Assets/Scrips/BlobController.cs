@@ -43,6 +43,7 @@ public class BlobController : MonoBehaviour
         _rigidbody2D = GetComponent<Rigidbody2D>();
         transform.localScale = new Vector3(maxScale, maxScale, maxScale);
         _currentWaterStorage = initialWaterStorage;
+        doSomething = false;
     }
 
     private void Update()

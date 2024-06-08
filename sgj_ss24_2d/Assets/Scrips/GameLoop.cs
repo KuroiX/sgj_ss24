@@ -34,6 +34,7 @@ public class GameLoop : MonoBehaviour
     private void Start()
     {
         playerInputManager.onPlayerJoined += OnPlayerJoined;
+        players = new List<PlayerClass>();
         _gameLoopStarted = false;
     }
 
