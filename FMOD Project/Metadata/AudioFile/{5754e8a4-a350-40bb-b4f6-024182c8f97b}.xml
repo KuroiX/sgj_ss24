@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{5754e8a4-a350-40bb-b4f6-024182c8f97b}">
+		<property name="assetPath">
+			<value>17 We’re in this together! I’ll save you, my drippy brothers and sisters.ogg</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>5.730270833333333</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{96d09b06-669f-4d23-b63f-abd1003316ba}</destination>
+		</relationship>
+	</object>
+</objects>
