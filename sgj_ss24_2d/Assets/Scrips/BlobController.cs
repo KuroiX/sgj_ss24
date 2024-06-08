@@ -8,10 +8,12 @@ using UnityEngine.Serialization;
 [RequireComponent(typeof(Rigidbody2D))]
 public class BlobController : MonoBehaviour
 {
-    public float startScale = 2;
     public float minScale = 0.1f;
-    public float maxSpeed;
+    public float maxScale = 2;
+    
     public float minSpeed;
+    public float maxSpeed;
+    
     public float shrinkFactor;
 
     private float _upInput;
@@ -24,6 +26,7 @@ public class BlobController : MonoBehaviour
     private void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
+        transform.localScale = new Vector3(maxScale, maxScale, maxScale);
     }
 
     private void Update()
@@ -53,7 +56,7 @@ public class BlobController : MonoBehaviour
         moveDir.Normalize();
 
         float currSpeed = Mathf.Lerp(minSpeed, maxSpeed,
-            Mathf.InverseLerp(startScale, minScale, transform.localScale.x));
+            Mathf.InverseLerp(maxScale, minScale, transform.localScale.x));
 
         Vector2 velocity = new Vector2(moveDir.x, moveDir.y) * currSpeed;
         _rigidbody2D.AddForce(velocity, ForceMode2D.Force);
@@ -81,20 +84,24 @@ public class BlobController : MonoBehaviour
     public void SetUp(float f)
     {
         _upInput = Mathf.Clamp01(Mathf.Abs(f));
+        _downInput = 0;
     }
 
     public void SetDown(float f)
     {
         _downInput = Mathf.Clamp01(Mathf.Abs(f));
+        _upInput = 0;
     }
 
     public void SetRight(float f)
     {
         _rightInput = Mathf.Clamp01(Mathf.Abs(f));
+        _leftInput = 0;
     }
 
     public void SetLeft(float f)
     {
         _leftInput = Mathf.Clamp01(Mathf.Abs(f));
+        _rightInput = 0;
     }
 }

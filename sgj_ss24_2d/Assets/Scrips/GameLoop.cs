@@ -17,7 +17,7 @@ public class Stage
 public class GameLoop : MonoBehaviour
 {
     //TODO change class
-    [SerializeField] private List<Card> players;
+    [SerializeField] private List<PlayerClass> players;
     [SerializeField] private List<Stage> stages;
     [SerializeField] private TextMeshProUGUI timerText;
     private int _currentStage;
@@ -55,7 +55,7 @@ public class GameLoop : MonoBehaviour
         
         for(int i = 0; i < players.Count; i++)
         {
-            players[i] = stageCards[i % stageCards.Count];
+            players[i].SetCard(stageCards[i % stageCards.Count]);
         }
     }
 
