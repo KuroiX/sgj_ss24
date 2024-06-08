@@ -3,17 +3,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AnimationTEst : MonoBehaviour
+public class AnimationHandler : MonoBehaviour
 {
     public float speed;
     private Animator _animator;
+    private SpriteRenderer _spriteRenderer;
 
     private void Start()
     {
         _animator = GetComponent<Animator>();
+        _spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         float horizontal = Input.GetAxisRaw("Horizontal");
@@ -25,10 +26,12 @@ public class AnimationTEst : MonoBehaviour
         
         if(horizontal < 0)
         {
+            _spriteRenderer.flipX = true;
             _animator.SetBool("L", true);
         }
         else if (horizontal > 0)
         {
+            _spriteRenderer.flipX = false;
             _animator.SetBool("R", true);
         }
 
