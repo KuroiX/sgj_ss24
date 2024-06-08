@@ -10,10 +10,19 @@ public class PlayerClass : MonoBehaviour
     [SerializeField] private BlobController blobController;
     [SerializeField] private Card _card;
 
-
+    private static bool started;
+    
     private void Awake()
     {
         blobController = FindObjectOfType<BlobController>();
+    }
+
+    public void StartGame(InputAction.CallbackContext obj)
+    {
+        if (started) return;
+        
+        started = true;    
+        FindObjectOfType<GameLoop>().StartGameLoop();
     }
 
     public void ActionOnperformedMove(InputAction.CallbackContext obj)
