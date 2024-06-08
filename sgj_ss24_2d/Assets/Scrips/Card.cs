@@ -8,7 +8,11 @@ public enum CardAction
     Up,
     Down,
     Left,
-    Right
+    Right,
+    UpD,
+    DownD,
+    LeftD,
+    RightD
 }
 
 [CreateAssetMenu(fileName = "Card", menuName = "Card")]

@@ -103,11 +103,11 @@ public class BlobController : MonoBehaviour
         return transform.localScale.x <= minScale;
     }
 
-    public void Dash()
+    public void Dash(Vector2 dir)
     {
         if (canDash)
         {
-            var vec = CalculateDir();
+            var vec = dir;
             _rigidbody2D.AddForce(vec * dashForce,ForceMode2D.Impulse);
             canDash = false;
             Invoke(nameof(ResetDash),dashCoolDown);
