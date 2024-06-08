@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
+using Dialogue;
 using TMPro;
 using UnityEditor.Rendering;
 using UnityEngine;
@@ -16,6 +17,8 @@ public class Stage
     public int time;
     public UnityEvent OnStageEnter;
 
+    public VoiceLine voiceLine;
+
     public void TriggerStageEnter()
     {
         OnStageEnter.Invoke();
@@ -24,6 +27,11 @@ public class Stage
 
 public class GameLoop : MonoBehaviour
 {
+    public UnityEvent StopEverything;
+    public UnityEvent StartEverything;
+
+    public DialogueManager dialogueManager;
+
     //TODO change class
     [SerializeField] private CinemachineVirtualCamera vCam;
     [SerializeField] private List<PlayerClass> players;
@@ -47,14 +55,23 @@ public class GameLoop : MonoBehaviour
     public void StartGameLoop()
     {
         if (players.Count < 2) return;
+        
         Debug.Log("start");
         _currentStage = 0;
-        _currentTime = stages[_currentStage].time;
+        EnterStage();
         UpdateTimer(_currentTime);
         SetPlayerCards(_currentStage);
         OnStageSwitch.AddListener(SwitchStage);
         _gameLoopStarted = true;
         OnGameLoopStarted.Invoke();
+    }
+
+    private void EnterStage()
+    {
+        _currentTime = stages[_currentStage].time;
+        stages[_currentStage].TriggerStageEnter();
+        dialogueManager.ShowVoiceLine(stages[_currentStage].voiceLine);
+        SetPlayerCards(_currentStage);
     }
 
     private void OnPlayerJoined(PlayerInput obj)
@@ -115,12 +132,10 @@ public class GameLoop : MonoBehaviour
         }
         
         _currentStage++;
-        _currentTime = stages[_currentStage].time;
-        stages[_currentStage].TriggerStageEnter();
-        SetPlayerCards(_currentStage);
+        EnterStage();
+        //TriggerCutscene();
     }
 
-    [ContextMenu("TriggerCutscene")]
     public void TriggerCutscene()
     {
         StartCoroutine(CutsceneEnumerator());
@@ -129,9 +144,12 @@ public class GameLoop : MonoBehaviour
     private IEnumerator CutsceneEnumerator()
     {
         vCam.Priority = 10;
-        yield return new WaitForSeconds(10);
+        StopEverything.Invoke();
+        yield return new WaitForSeconds(2);
+        StartEverything.Invoke();
         //trigger cutscene
         //disable character input;
         vCam.Priority = 0;
+        EnterStage();
     }
 }
