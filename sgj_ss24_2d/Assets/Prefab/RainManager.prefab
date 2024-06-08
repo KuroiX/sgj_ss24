@@ -47,8 +47,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rainPrefab: {fileID: 5741823545581013823, guid: 9060831f9a9ad674da504085b2c81d8b, type: 3}
-  maxDropCount: 0
-  spawnChance: 200
+  minSpawnTime: 0.75
+  maxSpawnTime: 1.25
   height: 5
   width: 9
 --- !u!198 &8297438462715592335
@@ -68,7 +68,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
