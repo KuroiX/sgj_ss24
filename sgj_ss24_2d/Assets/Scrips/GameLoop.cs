@@ -32,6 +32,8 @@ public class GameLoop : MonoBehaviour
 
     public DialogueManager dialogueManager;
 
+    public CardUi cardUi;
+    
     //TODO change class
     [SerializeField] private CinemachineVirtualCamera vCam;
     [SerializeField] private List<PlayerClass> players;
@@ -68,6 +70,8 @@ public class GameLoop : MonoBehaviour
 
     private void EnterStage()
     {
+        // TODO
+        cardUi.CreateNewUICards(stages[_currentStage].cards[0].prefabTransform, stages[_currentStage].cards[1].prefabTransform);
         _currentTime = stages[_currentStage].time;
         stages[_currentStage].TriggerStageEnter();
         dialogueManager.ShowVoiceLine(stages[_currentStage].voiceLine);
@@ -89,9 +93,11 @@ public class GameLoop : MonoBehaviour
         Debug.Log("TODO: nice asset");
     }
 
+    private bool paused;
+    
     private void Update()
     {
-        if(!_gameLoopStarted || gameOver) return;
+        if(!_gameLoopStarted || gameOver || paused) return;
         
         _currentTime -= Time.deltaTime;
         UpdateTimer(_currentTime);
@@ -138,8 +144,8 @@ public class GameLoop : MonoBehaviour
         }
         
         _currentStage++;
-        EnterStage();
-        //TriggerCutscene();
+        //EnterStage();
+        TriggerCutscene();
     }
 
     private IEnumerator GoToMainMenu()
@@ -156,9 +162,15 @@ public class GameLoop : MonoBehaviour
     private IEnumerator CutsceneEnumerator()
     {
         vCam.Priority = 10;
+        
+        paused = true;
         StopEverything.Invoke();
+        
         yield return new WaitForSeconds(2);
+        
         StartEverything.Invoke();
+        paused = false;
+        
         //trigger cutscene
         //disable character input;
         vCam.Priority = 0;

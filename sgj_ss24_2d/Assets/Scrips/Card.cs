@@ -15,5 +15,5 @@ public enum CardAction
 public class Card : ScriptableObject
 {
     public List<CardAction> cardActions;
-    public Texture2D image;
+    public RectTransform prefabTransform;
 }

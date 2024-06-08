@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Card3
   m_EditorClassIdentifier: 
   cardActions: 0000000002000000
+  prefabTransform: {fileID: 8437823781598283693, guid: 9a67758c9d232e54588da70d87385b27, type: 3}
