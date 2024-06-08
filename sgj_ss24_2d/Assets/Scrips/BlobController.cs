@@ -11,7 +11,7 @@ using UnityEngine.Serialization;
 public class BlobController : MonoBehaviour
 {
     [Header("Scale")] public float minScale = 0.1f;
-    public float maxScale = 2;
+    public float maxScale = 1;
     [Header("Speed")] public float minSpeed;
     public float maxSpeed;
     [Header("Dash")] public float dashForce = 10;

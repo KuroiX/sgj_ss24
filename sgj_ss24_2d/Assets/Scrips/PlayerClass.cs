@@ -31,6 +31,8 @@ public class PlayerClass : MonoBehaviour
             if (FindObjectOfType<PlayerInputManager>().playerCount == 1)
             {
                 blobController.AddComponent<DetectDropMerge>();
+                blobController.GetComponents<CircleCollider2D>()[1].enabled = true;
+                
                 _card = Instantiate(_card);
                 _card.cardActions = new List<CardAction>() {CardAction.Up, CardAction.Down};
                 //blobController = blobControllers[0];
@@ -45,7 +47,7 @@ public class PlayerClass : MonoBehaviour
                 _card = Instantiate(_card);
                 _card.cardActions = new List<CardAction>() {CardAction.Left, CardAction.Right};
                 //blobController = blobControllers[1];
-                
+
                 SceneManager.sceneLoaded += Subscriber;
 
                 DontDestroyOnLoad(gameObject);
