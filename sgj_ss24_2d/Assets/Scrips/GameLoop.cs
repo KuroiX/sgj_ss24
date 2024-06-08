@@ -62,6 +62,12 @@ public class GameLoop : MonoBehaviour
     [ContextMenu("Switch Stage")]
     public void SwitchStage()
     {
+        if (_currentStage >= stages.Count - 1)
+        {
+            Debug.Log("YOU WIN");
+            return;
+        }
+        
         _currentStage++;
         _currentTime = stages[_currentStage].time;
         SetPlayerCards(_currentStage);
