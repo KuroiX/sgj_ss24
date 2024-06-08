@@ -1314,6 +1314,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: de20b1b5cd8d4db4f90682aded349632, type: 2}
     - {fileID: 11400000, guid: 8951b9abcfb1bcf49856ad571656bd50, type: 2}
     - {fileID: 11400000, guid: 325201bfd3d886a4eb53792295938445, type: 2}
+    - {fileID: 11400000, guid: 2b444be00b28fcf43b1450dbb8531daa, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls: []
@@ -1340,6 +1341,32 @@ MonoBehaviour:
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1369569823}
+          m_TargetAssemblyTypeName: IntroCutScene.SpriteFadeIn, Assembly-CSharp
+          m_MethodName: FadeInAll
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1584545569}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: 
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: 
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
