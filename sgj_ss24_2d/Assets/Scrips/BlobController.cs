@@ -83,7 +83,7 @@ public class BlobController : MonoBehaviour
     private Vector2 CalculateDir()
     {
         var vec = new Vector2(_rightInput - _leftInput, _upInput - _downInput);
-        return vec.normalized;
+        return vec.magnitude > 1 ? vec.normalized : vec;
     }
 
     private bool IsDeath()
