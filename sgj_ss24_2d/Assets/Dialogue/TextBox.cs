@@ -35,6 +35,11 @@ namespace Dialogue
 
         #endregion
 
+        public float GetDuration()
+        {
+            return duration;
+        }
+
         public void DisplayTextBox(string text)
         {
             SetText(text);
