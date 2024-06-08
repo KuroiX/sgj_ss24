@@ -1101,7 +1101,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2109102026759068528, guid: e9ad254df78ef024084a0c2e1eaed865, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.07
+      value: -0.39
       objectReference: {fileID: 0}
     - target: {fileID: 2980505917378326819, guid: e9ad254df78ef024084a0c2e1eaed865, type: 3}
       propertyPath: m_Lens.OrthographicSize
@@ -1109,7 +1109,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3884437356547029583, guid: e9ad254df78ef024084a0c2e1eaed865, type: 3}
       propertyPath: m_Priority
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3884437356547029583, guid: e9ad254df78ef024084a0c2e1eaed865, type: 3}
       propertyPath: m_Lens.OrthographicSize
@@ -1121,7 +1121,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4493239392253321996, guid: e9ad254df78ef024084a0c2e1eaed865, type: 3}
       propertyPath: orthographic size
-      value: 8.53
+      value: 5.8
       objectReference: {fileID: 0}
     - target: {fileID: 6547124697507742244, guid: e9ad254df78ef024084a0c2e1eaed865, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1307,7 +1307,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!320 &1584545570
 PlayableDirector:
   m_ObjectHideFlags: 0
