@@ -24,11 +24,11 @@ public class PlayerClass : MonoBehaviour
         {
             
             //BlobController[] blobControllers = FindObjectsOfType<BlobController>();
-            blobController = Instantiate(blobPrefab).GetComponent<BlobController>();
             StartCoroutine(StartLobbyMovement());
             
             if (FindObjectOfType<PlayerInputManager>().playerCount == 1)
             {
+                blobController = Instantiate(blobPrefab, new Vector3(-4f, -4f, 0f), Quaternion.identity).GetComponent<BlobController>();
                 blobController.AddComponent<DetectDropMerge>();
                 blobController.GetComponents<CircleCollider2D>()[1].enabled = true;
                 
@@ -43,6 +43,7 @@ public class PlayerClass : MonoBehaviour
             
             if (FindObjectOfType<PlayerInputManager>().playerCount == 2)
             {
+                blobController = Instantiate(blobPrefab, new Vector3(4f, 2.5f, 0f), Quaternion.identity).GetComponent<BlobController>();
                 _card = Instantiate(_card);
                 _card.cardActions = new List<CardAction>() {CardAction.Left, CardAction.Right};
                 //blobController = blobControllers[1];
