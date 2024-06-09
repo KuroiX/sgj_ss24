@@ -1613,7 +1613,7 @@ Transform:
   m_GameObject: {fileID: 8760023461841534495}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 12.1, z: -11.85}
+  m_LocalPosition: {x: 0, y: 14.34, z: -11.85}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1691,7 +1691,7 @@ MonoBehaviour:
   m_Follow: {fileID: 0}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 5.19
+    OrthographicSize: 8.53
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
