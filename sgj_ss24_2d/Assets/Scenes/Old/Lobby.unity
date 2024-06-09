@@ -566,10 +566,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1068156080434485034, guid: 584d70f92593f2540bd9f0241a7aadf5, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 04c348e4fd093aa499d2cd9357c61593, type: 3}
     - target: {fileID: 4506544643115808910, guid: 584d70f92593f2540bd9f0241a7aadf5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.169
@@ -613,14 +609,6 @@ PrefabInstance:
     - target: {fileID: 6784436717845584489, guid: 584d70f92593f2540bd9f0241a7aadf5, type: 3}
       propertyPath: m_Name
       value: grill
-      objectReference: {fileID: 0}
-    - target: {fileID: 8476796507138464858, guid: 584d70f92593f2540bd9f0241a7aadf5, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.2582
-      objectReference: {fileID: 0}
-    - target: {fileID: 8476796507138464858, guid: 584d70f92593f2540bd9f0241a7aadf5, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 7.01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

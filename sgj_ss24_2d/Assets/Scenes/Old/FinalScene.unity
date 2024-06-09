@@ -199,7 +199,7 @@ PrefabInstance:
       objectReference: {fileID: 957969167}
     - target: {fileID: 2422243172165646558, guid: a50534db2c779324da285455b44d289e, type: 3}
       propertyPath: stages.Array.size
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2422243172165646558, guid: a50534db2c779324da285455b44d289e, type: 3}
       propertyPath: playerInputManager
@@ -235,11 +235,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2422243172165646558, guid: a50534db2c779324da285455b44d289e, type: 3}
       propertyPath: stages.Array.data[6].time
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2422243172165646558, guid: a50534db2c779324da285455b44d289e, type: 3}
       propertyPath: stages.Array.data[7].time
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2422243172165646558, guid: a50534db2c779324da285455b44d289e, type: 3}
       propertyPath: stages.Array.data[0].voiceLine
@@ -268,7 +268,7 @@ PrefabInstance:
     - target: {fileID: 2422243172165646558, guid: a50534db2c779324da285455b44d289e, type: 3}
       propertyPath: stages.Array.data[6].voiceLine
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 11400000, guid: f34a46f6cd50a1645b09c08f0b404f34, type: 2}
     - target: {fileID: 2422243172165646558, guid: a50534db2c779324da285455b44d289e, type: 3}
       propertyPath: stages.Array.data[2].cards.Array.size
       value: 2
@@ -312,11 +312,11 @@ PrefabInstance:
     - target: {fileID: 2422243172165646558, guid: a50534db2c779324da285455b44d289e, type: 3}
       propertyPath: stages.Array.data[3].cards.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: df654c2b4a1ecee40bc9283e153e8038, type: 2}
+      objectReference: {fileID: 11400000, guid: c1964f1f127b29d4692903a7c6b336f8, type: 2}
     - target: {fileID: 2422243172165646558, guid: a50534db2c779324da285455b44d289e, type: 3}
       propertyPath: stages.Array.data[3].cards.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: 4fba6a3fd9e74544f987d7926096b5b3, type: 2}
+      objectReference: {fileID: 11400000, guid: e029f7a72b562954fb2dd6e0aca78832, type: 2}
     - target: {fileID: 2422243172165646558, guid: a50534db2c779324da285455b44d289e, type: 3}
       propertyPath: stages.Array.data[4].cards.Array.data[0]
       value: 
@@ -328,19 +328,19 @@ PrefabInstance:
     - target: {fileID: 2422243172165646558, guid: a50534db2c779324da285455b44d289e, type: 3}
       propertyPath: stages.Array.data[5].cards.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: 4fba6a3fd9e74544f987d7926096b5b3, type: 2}
+      objectReference: {fileID: 11400000, guid: d1c7c1c22ed126c4bb626787c0985c26, type: 2}
     - target: {fileID: 2422243172165646558, guid: a50534db2c779324da285455b44d289e, type: 3}
       propertyPath: stages.Array.data[5].cards.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: df654c2b4a1ecee40bc9283e153e8038, type: 2}
+      objectReference: {fileID: 11400000, guid: 57a9049d58435fa4abfcb547d091ba4c, type: 2}
     - target: {fileID: 2422243172165646558, guid: a50534db2c779324da285455b44d289e, type: 3}
       propertyPath: stages.Array.data[6].cards.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: d1c7c1c22ed126c4bb626787c0985c26, type: 2}
+      objectReference: {fileID: 11400000, guid: df654c2b4a1ecee40bc9283e153e8038, type: 2}
     - target: {fileID: 2422243172165646558, guid: a50534db2c779324da285455b44d289e, type: 3}
       propertyPath: stages.Array.data[6].cards.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: 57a9049d58435fa4abfcb547d091ba4c, type: 2}
+      objectReference: {fileID: 11400000, guid: 4fba6a3fd9e74544f987d7926096b5b3, type: 2}
     - target: {fileID: 2422243172165646558, guid: a50534db2c779324da285455b44d289e, type: 3}
       propertyPath: stages.Array.data[7].cards.Array.data[0]
       value: 
