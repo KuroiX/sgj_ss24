@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 753f8c44eef073c448fe6f0fb9f3c7b1, type: 3}
   m_Name: Card1
   m_EditorClassIdentifier: 
-  cardActions: 0000000001000000
+  cardActions: 00000000010000000400000005000000
   prefabTransform: {fileID: 2679479444678962582, guid: 836bc8bc119228e4b8dcde6ea04b4fa3, type: 3}

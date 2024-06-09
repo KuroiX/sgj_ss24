@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{eab0d976-625b-4f13-8462-4542e25633d0}">
+		<property name="assetPath">
+			<value>21 Wait! It seems like the storm is getting stronger!.ogg</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>4.401979166666667</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{96d09b06-669f-4d23-b63f-abd1003316ba}</destination>
+		</relationship>
+	</object>
+</objects>

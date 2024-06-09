@@ -191,6 +191,14 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2422243172165646558, guid: a50534db2c779324da285455b44d289e, type: 3}
+      propertyPath: stages.Array.data[0].cards.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2422243172165646558, guid: a50534db2c779324da285455b44d289e, type: 3}
+      propertyPath: stages.Array.data[0].cards.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 57a9049d58435fa4abfcb547d091ba4c, type: 2}
+    - target: {fileID: 2422243172165646558, guid: a50534db2c779324da285455b44d289e, type: 3}
       propertyPath: OnGameLoopStarted.m_PersistentCalls.m_Calls.Array.size
       value: 2
       objectReference: {fileID: 0}

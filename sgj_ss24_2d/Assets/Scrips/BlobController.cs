@@ -11,7 +11,7 @@ using UnityEngine.Serialization;
 public class BlobController : MonoBehaviour
 {
     [Header("Scale")] public float minScale = 0.1f;
-    public float maxScale = 2;
+    public float maxScale = 1;
     [Header("Speed")] public float minSpeed;
     public float maxSpeed;
     [Header("Dash")] public float dashForce = 10;
@@ -109,12 +109,14 @@ public class BlobController : MonoBehaviour
         return transform.localScale.x <= minScale;
     }
 
-    public void Dash()
+    public void Dash(Vector2 dir)
     {
+        Debug.Log("dash" + canDash);
         if (canDash)
         {
-            var vec = CalculateDir();
-            _rigidbody2D.AddForce(vec * dashForce, ForceMode2D.Impulse);
+            Debug.Log("can dash apparently");
+            var vec = dir;
+            _rigidbody2D.AddForce(vec * dashForce,ForceMode2D.Impulse);
             canDash = false;
             Invoke(nameof(ResetDash), dashCoolDown);
         }

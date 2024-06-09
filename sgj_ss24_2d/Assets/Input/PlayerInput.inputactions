@@ -15,7 +15,16 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Ability",
+                    "name": "Start",
+                    "type": "Button",
+                    "id": "255aa4f7-c8d2-4210-aca3-a0b8edc4b229",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "AbilityS",
                     "type": "Button",
                     "id": "9511eca1-a8a2-4479-9e75-2ba6ba0ddba6",
                     "expectedControlType": "Button",
@@ -24,9 +33,27 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Start",
+                    "name": "AbilityE",
                     "type": "Button",
-                    "id": "255aa4f7-c8d2-4210-aca3-a0b8edc4b229",
+                    "id": "9498e104-2b02-4d79-a268-4965936474cf",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "AbilityN",
+                    "type": "Button",
+                    "id": "4e2a21ce-984b-46c9-ae23-4ace4b2cc1af",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "AbilityW",
+                    "type": "Button",
+                    "id": "1bea4541-e5f2-4ce8-a2a4-36c5994bffbb",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -58,23 +85,56 @@
                 },
                 {
                     "name": "",
-                    "id": "bec64b0e-fde2-4ab2-86ef-08511c610e85",
-                    "path": "<Gamepad>/buttonSouth",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Ability",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "d0002c63-4b0e-446e-85f3-4a9b7dddcdac",
                     "path": "<Gamepad>/start",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Start",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fee901ca-6bff-41e2-80d9-3e3e716a6bc8",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AbilityE",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "81925654-584d-4a22-9446-978450c3fc89",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AbilityN",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b00892ab-a2dc-42c0-8400-cff9f343b608",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AbilityW",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bec64b0e-fde2-4ab2-86ef-08511c610e85",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AbilityS",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
