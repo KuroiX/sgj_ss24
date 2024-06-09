@@ -100,6 +100,8 @@ public class BlobController : MonoBehaviour
 
     public Vector2 CalculateDir()
     {
+        if (!doSomething) return Vector2.zero;
+        
         var vec = new Vector2(_rightInput - _leftInput, _upInput - _downInput);
         return vec.magnitude > 1 ? vec.normalized : vec;
     }
@@ -111,6 +113,8 @@ public class BlobController : MonoBehaviour
 
     public void Dash(Vector2 dir)
     {
+        if (!doSomething) return;
+        
         Debug.Log("dash" + canDash);
         if (canDash)
         {

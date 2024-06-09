@@ -801,7 +801,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3590212925756978036, guid: ca0dc6d501495ae41bbe109750687285, type: 3}
       propertyPath: minLoadTime
-      value: 0.05
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3590212925756978037, guid: ca0dc6d501495ae41bbe109750687285, type: 3}
       propertyPath: m_LocalPosition.x
