@@ -22,15 +22,15 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 1.8737911683196824
+    m_Start: 2.3
     m_ClipIn: 0
     m_Asset: {fileID: -8210389371301677115}
-    m_Duration: 1.1428754983469842
+    m_Duration: 2.866666666666667
     m_TimeScale: 1
     m_ParentTrack: {fileID: -8527592717568870489}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
-    m_BlendInDuration: 0.49287549834698563
+    m_BlendInDuration: 1.2000000000000002
     m_BlendOutDuration: -1
     m_MixInCurve:
       serializedVersion: 2
@@ -89,18 +89,18 @@ MonoBehaviour:
     m_PreExtrapolationMode: 0
     m_PostExtrapolationTime: 0
     m_PreExtrapolationTime: 0
-    m_DisplayName: Virtual Camera
+    m_DisplayName: Virtual Camera 2
   - m_Version: 1
     m_Start: 0
     m_ClipIn: 0
     m_Asset: {fileID: 2908547963391904130}
-    m_Duration: 2.366666666666668
+    m_Duration: 3.5
     m_TimeScale: 1
     m_ParentTrack: {fileID: -8527592717568870489}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
     m_BlendInDuration: -1
-    m_BlendOutDuration: 0.49287549834698563
+    m_BlendOutDuration: 1.2000000000000002
     m_MixInCurve:
       serializedVersion: 2
       m_Curve:
@@ -214,22 +214,6 @@ MonoBehaviour:
   VirtualCamera:
     exposedName: 477e5a1f1bbdd3345a607907c459d367
     defaultValue: {fileID: 0}
---- !u!114 &3256609311608207479
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
-  m_Name: OnMoveToGrillCam
-  m_EditorClassIdentifier: 
-  m_Time: 2.6571245016530156
-  m_Retroactive: 0
-  m_EmitOnce: 0
-  m_Asset: {fileID: 11400000, guid: de20b1b5cd8d4db4f90682aded349632, type: 2}
 --- !u!114 &3604798069838315432
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -253,7 +237,6 @@ MonoBehaviour:
   m_Clips: []
   m_Markers:
     m_Objects:
-    - {fileID: 3256609311608207479}
     - {fileID: 5838276725958050365}
 --- !u!114 &5838276725958050365
 MonoBehaviour:

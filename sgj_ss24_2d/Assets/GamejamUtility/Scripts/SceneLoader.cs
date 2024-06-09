@@ -99,7 +99,7 @@ public class SceneLoader : MonoBehaviour
         IsLoading = true;
 
         _fadeImage.enabled = true;
-        _fadeImage.color = new Color(0, 0, 0, isFadingToBlack ? 0 : 1);
+        _fadeImage.color = new Color(1, 1, 1, isFadingToBlack ? 0 : 1);
         
         float currentTime = fadeTime;
         
@@ -109,7 +109,7 @@ public class SceneLoader : MonoBehaviour
 
             float newAlpha = isFadingToBlack ? 1 - progress : progress;
             
-            _fadeImage.color = new Color(0, 0, 0, newAlpha);
+            _fadeImage.color = new Color(1, 1, 1, newAlpha);
             
             //Debug.Log($"Fade by {newAlpha}");
             
@@ -118,7 +118,7 @@ public class SceneLoader : MonoBehaviour
             currentTime -= Time.deltaTime;
         }
         
-        _fadeImage.color = new Color(0, 0, 0, isFadingToBlack ? 1 : 0);
+        _fadeImage.color = new Color(1, 1, 1, isFadingToBlack ? 1 : 0);
         _fadeImage.enabled = isFadingToBlack;
         IsLoading = isFadingToBlack;
     }
