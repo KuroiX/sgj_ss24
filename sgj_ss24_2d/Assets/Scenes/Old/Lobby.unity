@@ -1121,11 +1121,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: 418108129
-      Data2: 1184496325
-      Data3: -1226113149
-      Data4: 1299686611
-    Path: event:/MUSIC/MainTheme
+      Data1: -1809662769
+      Data2: 1232120112
+      Data3: 1371565723
+      Data4: -1087513897
+    Path: event:/SFX/RainAmbience
   Event: 
   PlayEvent: 1
   StopEvent: 2
