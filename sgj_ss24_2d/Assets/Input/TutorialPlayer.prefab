@@ -127,3 +127,5 @@ MonoBehaviour:
   blobController: {fileID: 0}
   _card: {fileID: 11400000, guid: d1c7c1c22ed126c4bb626787c0985c26, type: 2}
   isTutorial: 1
+  lowFdiv: 15
+  hightFdiv: 10
