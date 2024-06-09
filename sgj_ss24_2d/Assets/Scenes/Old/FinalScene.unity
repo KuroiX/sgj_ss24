@@ -950,6 +950,14 @@ PrefabInstance:
       propertyPath: height
       value: 4.54
       objectReference: {fileID: 0}
+    - target: {fileID: 4693797921808459088, guid: 51641b43b1e36fb4a913c150730f1511, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+    - target: {fileID: 4693797921808459088, guid: 51641b43b1e36fb4a913c150730f1511, type: 3}
+      propertyPath: m_RenderMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5310250403348869587, guid: 51641b43b1e36fb4a913c150730f1511, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1595,6 +1603,14 @@ PrefabInstance:
     - target: {fileID: 5118825466925662112, guid: 0c5d8dff06a2eb542adfa780ac0f0e88, type: 3}
       propertyPath: m_Name
       value: CoalManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 7317918382958475857, guid: 0c5d8dff06a2eb542adfa780ac0f0e88, type: 3}
+      propertyPath: maxTime
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7317918382958475857, guid: 0c5d8dff06a2eb542adfa780ac0f0e88, type: 3}
+      propertyPath: minTime
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
