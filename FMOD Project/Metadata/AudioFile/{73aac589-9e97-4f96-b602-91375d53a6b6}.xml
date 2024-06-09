@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{73aac589-9e97-4f96-b602-91375d53a6b6}">
+		<property name="assetPath">
+			<value>20 Puh, can’t do this much longer….ogg</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>3.2912083333333335</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{96d09b06-669f-4d23-b63f-abd1003316ba}</destination>
+		</relationship>
+	</object>
+</objects>
