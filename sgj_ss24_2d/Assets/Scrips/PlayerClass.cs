@@ -25,9 +25,8 @@ public class PlayerClass : MonoBehaviour
             
             //BlobController[] blobControllers = FindObjectsOfType<BlobController>();
             blobController = Instantiate(blobPrefab).GetComponent<BlobController>();
+            StartCoroutine(StartLobbyMovement());
             
-            blobController.StartBlob(); 
-            blobController.StopShrinking();
             if (FindObjectOfType<PlayerInputManager>().playerCount == 1)
             {
                 blobController.AddComponent<DetectDropMerge>();
@@ -53,6 +52,14 @@ public class PlayerClass : MonoBehaviour
                 DontDestroyOnLoad(gameObject);
             }
         }
+    }
+
+    private IEnumerator StartLobbyMovement()
+    {
+        yield return null;
+        
+        blobController.StartBlob(); 
+        blobController.StopShrinking();
     }
 
     private void Subscriber(Scene arg0, LoadSceneMode arg1)
