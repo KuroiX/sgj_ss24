@@ -25,15 +25,17 @@ public class PlayerClass : MonoBehaviour
         {
             //BlobController[] blobControllers = FindObjectsOfType<BlobController>();
             StartCoroutine(StartLobbyMovement());
-            
+
             if (FindObjectOfType<PlayerInputManager>().playerCount == 1)
             {
-                blobController = Instantiate(blobPrefab, new Vector3(-4f, -4f, 0f), Quaternion.identity).GetComponent<BlobController>();
+                blobController = Instantiate(blobPrefab, new Vector3(-4f, -4f, 0f), Quaternion.identity)
+                    .GetComponent<BlobController>();
                 blobController.AddComponent<DetectDropMerge>();
                 blobController.GetComponents<CircleCollider2D>()[1].enabled = true;
 
                 _card = Instantiate(_card);
-                _card.cardActions = new List<CardAction>() {CardAction.Up, CardAction.Down, CardAction.UpD, CardAction.DownD};
+                _card.cardActions = new List<CardAction>()
+                    {CardAction.Up, CardAction.Down, CardAction.UpD, CardAction.DownD};
                 //blobController = blobControllers[0];
 
                 SceneManager.sceneLoaded += Subscriber;
@@ -43,9 +45,11 @@ public class PlayerClass : MonoBehaviour
 
             if (FindObjectOfType<PlayerInputManager>().playerCount == 2)
             {
-                blobController = Instantiate(blobPrefab, new Vector3(4f, 2.5f, 0f), Quaternion.identity).GetComponent<BlobController>();
+                blobController = Instantiate(blobPrefab, new Vector3(4f, 2.5f, 0f), Quaternion.identity)
+                    .GetComponent<BlobController>();
                 _card = Instantiate(_card);
-                _card.cardActions = new List<CardAction>() {CardAction.Left, CardAction.Right, CardAction.LeftD, CardAction.RightD};
+                _card.cardActions = new List<CardAction>()
+                    {CardAction.Left, CardAction.Right, CardAction.LeftD, CardAction.RightD};
                 //blobController = blobControllers[1];
 
                 SceneManager.sceneLoaded += Subscriber;
@@ -58,8 +62,8 @@ public class PlayerClass : MonoBehaviour
     private IEnumerator StartLobbyMovement()
     {
         yield return null;
-        
-        blobController.StartBlob(); 
+
+        blobController.StartBlob();
         blobController.StopShrinking();
     }
 
@@ -114,8 +118,7 @@ public class PlayerClass : MonoBehaviour
                         else
                             VibrationGOAwai();
                     }
-                    else
-                        VibrationGOAwai();
+                  
 
                     break;
                 case CardAction.Down:
@@ -127,8 +130,8 @@ public class PlayerClass : MonoBehaviour
                         else
                             VibrationGOAwai();
                     }
-                    else
-                        VibrationGOAwai();
+                   
+
                     break;
                 case CardAction.Right:
                     if (input.x >= 0)
@@ -143,10 +146,8 @@ public class PlayerClass : MonoBehaviour
                             VibrationGOAwai();
                         }
                     }
-                    else
-                    {
-                        VibrationGOAwai();
-                    }
+                    
+
                     break;
                 case CardAction.Left:
                     if (input.x < 0)
@@ -161,17 +162,14 @@ public class PlayerClass : MonoBehaviour
                             VibrationGOAwai();
                         }
                     }
-                    else
-                    {
-                        VibrationGOAwai();
-                    }
+                    
+
                     break;
             }
         }
     }
-    
-    
-    
+
+
     public void ActionOnperformedDashE(InputAction.CallbackContext obj)
     {
         foreach (var cardAction in _card.cardActions)
@@ -184,7 +182,7 @@ public class PlayerClass : MonoBehaviour
             }
         }
     }
-    
+
     public void ActionOnperformedDashN(InputAction.CallbackContext obj)
     {
         Debug.Log("dash up");
@@ -197,7 +195,7 @@ public class PlayerClass : MonoBehaviour
             }
         }
     }
-    
+
     public void ActionOnperformedDashS(InputAction.CallbackContext obj)
     {
         Debug.Log("dash south");
@@ -210,20 +208,20 @@ public class PlayerClass : MonoBehaviour
             }
         }
     }
+
     public void ActionOnperformedDashW(InputAction.CallbackContext obj)
     {
         Debug.Log("dash left");
         foreach (var cardAction in _card.cardActions)
         {
-            if(cardAction == CardAction.LeftD)
+            if (cardAction == CardAction.LeftD)
             {
                 blobController.Dash(Vector2.left);
                 VibratorGoBrrrrr(10f);
             }
-            
         }
     }
-    
+
     public void SetCard(Card newCard)
     {
         _card = newCard;
@@ -231,10 +229,11 @@ public class PlayerClass : MonoBehaviour
 
     public float lowFdiv;
     public float hightFdiv;
+
     public void VibratorGoBrrrrr(float strangth)
     {
-        strangth = Mathf.Abs(strangth);
-        GetComponent<PlayerInput>().GetDevice<Gamepad>().SetMotorSpeeds(strangth / lowFdiv, strangth / hightFdiv);
+        strangth = Mathf.Clamp01(Mathf.Abs(strangth));
+        GetComponent<PlayerInput>().GetDevice<Gamepad>().SetMotorSpeeds(0, 0.02f * strangth);
     }
 
     private void VibrationGOAwai()
