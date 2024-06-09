@@ -94,6 +94,8 @@ public class BlobController : MonoBehaviour
     public void GetHit(float value)
     {
         _currentWaterStorage -= value;
+        if (_currentWaterStorage < 0)
+            _currentWaterStorage = 0;
     }
 
     public Vector2 CalculateDir()
