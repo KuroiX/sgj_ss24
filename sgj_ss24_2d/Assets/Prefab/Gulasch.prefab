@@ -33,6 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2391971717111806674}
+  - {fileID: 6275549380644857408}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4632420999553877278
@@ -179,8 +180,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.42, y: 0.42, z: 0.42}
   m_ConstrainProportionsScale: 1
-  m_Children:
-  - {fileID: 6275549380644857408}
+  m_Children: []
   m_Father: {fileID: 1005908191627722672}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6577552405400526367
@@ -263,10 +263,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.17399198, w: 0.9847471}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5.1999993, y: 6.666666, z: 6.666666}
+  m_LocalScale: {x: 2.1839998, y: 2.7999997, z: 2.7999997}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2391971717111806674}
+  m_Father: {fileID: 1005908191627722672}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -20.04}
 --- !u!61 &9208044879294185834
 BoxCollider2D:
