@@ -10,9 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3debef488e6d4d869d2063b9099f121e, type: 3}
-  m_Name: VoiceLine 6
+  m_Name: VoiceLine 0
   m_EditorClassIdentifier: 
   audioClip: {fileID: 0}
-  shit: "event:/VOICE/18 I\u2019m gonna roast you like one of my french toasts!"
-  icon: {fileID: 21300000, guid: 60ada237ba811d741b9964e72b5874a6, type: 3}
-  textLine: "I\u2019m gonna roast you like one of my french toasts!"
+  shit: "event:/VOICE/07 Argh, let\u2019s see how fast you can slide around when
+    I flip your button mappings!"
+  icon: {fileID: 21300000, guid: 6409f0d9b2a809c41bc93e0a3718657d, type: 3}
+  textLine: "Argh, let\u2019s see how fast you can slide around when I flip your
+    button mappings!"

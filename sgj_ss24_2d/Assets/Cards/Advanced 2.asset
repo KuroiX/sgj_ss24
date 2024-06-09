@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 753f8c44eef073c448fe6f0fb9f3c7b1, type: 3}
   m_Name: Advanced 2
   m_EditorClassIdentifier: 
-  cardActions: 030000000600000004000000
-  prefabTransform: {fileID: 8200446196264749781, guid: cef5ef72feea90d4c8eef8e63f23a065, type: 3}
+  cardActions: 0400000003000000
+  prefabTransform: {fileID: 8200446196264749781, guid: b81434ee16bdc4345afb27cfce77739b, type: 3}

@@ -47,10 +47,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rainPrefab: {fileID: 5741823545581013823, guid: 9060831f9a9ad674da504085b2c81d8b, type: 3}
-  minSpawnTime: 0.75
-  maxSpawnTime: 1.25
-  height: 5
-  width: 9
+  minSpawnTime: 0.5
+  maxSpawnTime: 1
+  height: 4.54
+  width: 8.51
 --- !u!198 &8297438462715592335
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -4839,7 +4839,7 @@ ParticleSystemRenderer:
   m_VertexStreams: 00010304
   m_UseCustomTrailVertexStreams: 0
   m_TrailVertexStreams: 00010304
-  m_Mesh: {fileID: 0}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}

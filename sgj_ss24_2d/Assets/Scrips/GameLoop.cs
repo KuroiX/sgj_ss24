@@ -41,6 +41,7 @@ public class GameLoop : MonoBehaviour
     [SerializeField] private List<Stage> stages;
     [SerializeField] private TextMeshProUGUI timerText;
     [SerializeField] private PlayerInputManager playerInputManager;
+    public int cutsceneTime;
     private int _currentStage;
     private float _currentTime;
     private bool _gameLoopStarted;
@@ -171,7 +172,7 @@ public class GameLoop : MonoBehaviour
         paused = true;
         StopEverything.Invoke();
         
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(cutsceneTime);
         
         StartEverything.Invoke();
         paused = false;

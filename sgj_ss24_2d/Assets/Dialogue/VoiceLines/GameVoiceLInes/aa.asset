@@ -9,8 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 753f8c44eef073c448fe6f0fb9f3c7b1, type: 3}
-  m_Name: Advanced 1
+  m_Script: {fileID: 11500000, guid: 3debef488e6d4d869d2063b9099f121e, type: 3}
+  m_Name: aa
   m_EditorClassIdentifier: 
-  cardActions: 0600000001000000
-  prefabTransform: {fileID: 8200446196264749781, guid: ee06e7ea75edf15469a56ae291ed3a53, type: 3}
+  audioClip: {fileID: 0}
+  shit: 
+  icon: {fileID: 0}
+  textLine: Test

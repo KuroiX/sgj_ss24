@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Card Dash 3
   m_EditorClassIdentifier: 
   cardActions: 0100000004000000
-  prefabTransform: {fileID: 8200446196264749781, guid: cef5ef72feea90d4c8eef8e63f23a065, type: 3}
+  prefabTransform: {fileID: 8200446196264749781, guid: 3e7c78e7989beae46a8d9b8e040f1abe, type: 3}

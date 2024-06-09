@@ -44,24 +44,159 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b6f0ce7563f63d4da22156f7f410cbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  StopEverything:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: BlobController, Assembly-CSharp
+        m_MethodName: StopBlob
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  StartEverything:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: BlobController, Assembly-CSharp
+        m_MethodName: StartBlob
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  dialogueManager: {fileID: 0}
+  cardUi: {fileID: 0}
   vCam: {fileID: 0}
-  players:
-  - {fileID: 0}
-  - {fileID: 0}
+  players: []
   stages:
   - cards:
     - {fileID: 11400000, guid: d1c7c1c22ed126c4bb626787c0985c26, type: 2}
     - {fileID: 11400000, guid: 57a9049d58435fa4abfcb547d091ba4c, type: 2}
     time: 20
+    OnStageEnter:
+      m_PersistentCalls:
+        m_Calls: []
+    voiceLine: {fileID: 11400000, guid: 80fea1e72cc9aaa48bfed0a4f234c1c0, type: 2}
   - cards:
-    - {fileID: 11400000, guid: 167f22fe40304cd409b1b23b92483e45, type: 2}
-    - {fileID: 11400000, guid: c45832a0f5c99c84da9c7f15174fe3cd, type: 2}
+    - {fileID: 11400000, guid: 57a9049d58435fa4abfcb547d091ba4c, type: 2}
+    - {fileID: 11400000, guid: d1c7c1c22ed126c4bb626787c0985c26, type: 2}
     time: 20
+    OnStageEnter:
+      m_PersistentCalls:
+        m_Calls: []
+    voiceLine: {fileID: 11400000, guid: 96dd924cc1637be47ae2557b6a2e265f, type: 2}
+  - cards:
+    - {fileID: 11400000, guid: 57a9049d58435fa4abfcb547d091ba4c, type: 2}
+    - {fileID: 11400000, guid: d1c7c1c22ed126c4bb626787c0985c26, type: 2}
+    time: 20
+    OnStageEnter:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: ObstacleSpawner, Assembly-CSharp
+          m_MethodName: StartSpawning
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    voiceLine: {fileID: 11400000, guid: 4b7844445ba4450469115ff4f4427a9a, type: 2}
+  - cards:
+    - {fileID: 11400000, guid: e029f7a72b562954fb2dd6e0aca78832, type: 2}
+    - {fileID: 11400000, guid: c1964f1f127b29d4692903a7c6b336f8, type: 2}
+    time: 20
+    OnStageEnter:
+      m_PersistentCalls:
+        m_Calls: []
+    voiceLine: {fileID: 11400000, guid: 7f24e7715f87c8a4b835ed119bf9bdd5, type: 2}
+  - cards:
+    - {fileID: 11400000, guid: c1964f1f127b29d4692903a7c6b336f8, type: 2}
+    - {fileID: 11400000, guid: e029f7a72b562954fb2dd6e0aca78832, type: 2}
+    time: 20
+    OnStageEnter:
+      m_PersistentCalls:
+        m_Calls: []
+    voiceLine: {fileID: 11400000, guid: 70a770a7e26474a40b033c4b619718c8, type: 2}
+  - cards:
+    - {fileID: 11400000, guid: d1c7c1c22ed126c4bb626787c0985c26, type: 2}
+    - {fileID: 11400000, guid: 57a9049d58435fa4abfcb547d091ba4c, type: 2}
+    time: 20
+    OnStageEnter:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: CoalSpawner, Assembly-CSharp
+          m_MethodName: SpawnCoal
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    voiceLine: {fileID: 11400000, guid: b98263d9e9d6911419d6947ab9188ee4, type: 2}
+  - cards:
+    - {fileID: 11400000, guid: 8ed10cd937554e047b327e0645102be0, type: 2}
+    - {fileID: 11400000, guid: 0f65534306418bb43842069b735eeb11, type: 2}
+    time: 20
+    OnStageEnter:
+      m_PersistentCalls:
+        m_Calls: []
+    voiceLine: {fileID: 11400000, guid: e2edca782776ce14f86aeaf46eb422cd, type: 2}
+  - cards:
+    - {fileID: 11400000, guid: df654c2b4a1ecee40bc9283e153e8038, type: 2}
+    - {fileID: 11400000, guid: 4fba6a3fd9e74544f987d7926096b5b3, type: 2}
+    time: 20
+    OnStageEnter:
+      m_PersistentCalls:
+        m_Calls: []
+    voiceLine: {fileID: 11400000, guid: f34a46f6cd50a1645b09c08f0b404f34, type: 2}
   timerText: {fileID: 0}
   playerInputManager: {fileID: 0}
+  cutsceneTime: 5
   OnGameLoopStarted:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: Rain, Assembly-CSharp
+        m_MethodName: StartRain
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: BlobController, Assembly-CSharp
+        m_MethodName: StartBlob
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnStageSwitch:
     m_PersistentCalls:
       m_Calls: []
