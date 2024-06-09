@@ -109,8 +109,10 @@ public class BlobController : MonoBehaviour
 
     public void Dash(Vector2 dir)
     {
+        Debug.Log("dash" + canDash);
         if (canDash)
         {
+            Debug.Log("can dash apparently");
             var vec = dir;
             _rigidbody2D.AddForce(vec * dashForce,ForceMode2D.Impulse);
             canDash = false;

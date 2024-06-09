@@ -864,7 +864,7 @@ MonoBehaviour:
   minSpeed: 10
   maxSpeed: 20
   dashForce: 10
-  dashCoolDown: 3
+  dashCoolDown: 0.5
   initialWaterStorage: 100
   shrinkSubtrahent: {fileID: 11400000, guid: 35ad55da0d2a0f54aac3a8467ad9af0a, type: 2}
 --- !u!50 &873841122

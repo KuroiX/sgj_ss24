@@ -33,7 +33,7 @@ public class PlayerClass : MonoBehaviour
                 blobController.GetComponents<CircleCollider2D>()[1].enabled = true;
                 
                 _card = Instantiate(_card);
-                _card.cardActions = new List<CardAction>() {CardAction.Up, CardAction.Down};
+                _card.cardActions = new List<CardAction>() {CardAction.Up, CardAction.Down, CardAction.UpD, CardAction.DownD};
                 //blobController = blobControllers[0];
 
                 SceneManager.sceneLoaded += Subscriber;
@@ -45,7 +45,7 @@ public class PlayerClass : MonoBehaviour
             {
                 blobController = Instantiate(blobPrefab, new Vector3(4f, 2.5f, 0f), Quaternion.identity).GetComponent<BlobController>();
                 _card = Instantiate(_card);
-                _card.cardActions = new List<CardAction>() {CardAction.Left, CardAction.Right};
+                _card.cardActions = new List<CardAction>() {CardAction.Left, CardAction.Right, CardAction.LeftD, CardAction.RightD};
                 //blobController = blobControllers[1];
 
                 SceneManager.sceneLoaded += Subscriber;
@@ -127,6 +127,8 @@ public class PlayerClass : MonoBehaviour
     
     public void ActionOnperformedDashE(InputAction.CallbackContext obj)
     {
+        Debug.Log("dash right");
+        
         foreach (var cardAction in _card.cardActions)
         {
             if(cardAction == CardAction.RightD)
@@ -136,6 +138,7 @@ public class PlayerClass : MonoBehaviour
     
     public void ActionOnperformedDashN(InputAction.CallbackContext obj)
     {
+        Debug.Log("dash up");
         foreach (var cardAction in _card.cardActions)
         {
             if(cardAction == CardAction.UpD)
@@ -145,6 +148,7 @@ public class PlayerClass : MonoBehaviour
     
     public void ActionOnperformedDashS(InputAction.CallbackContext obj)
     {
+        Debug.Log("dash south");
         foreach (var cardAction in _card.cardActions)
         {
             if(cardAction == CardAction.DownD)
@@ -153,6 +157,7 @@ public class PlayerClass : MonoBehaviour
     }
     public void ActionOnperformedDashW(InputAction.CallbackContext obj)
     {
+        Debug.Log("dash left");
         foreach (var cardAction in _card.cardActions)
         {
             if(cardAction == CardAction.LeftD)
