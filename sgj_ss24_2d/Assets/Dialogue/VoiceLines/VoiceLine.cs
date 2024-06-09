@@ -6,6 +6,7 @@ namespace Dialogue
     public class VoiceLine : ScriptableObject
     {
         public AudioClip audioClip;
+        public string shit;
         public Sprite icon;
         public string textLine;
     }

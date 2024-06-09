@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: VoiceLine 1
   m_EditorClassIdentifier: 
   audioClip: {fileID: 0}
+  shit: event:/VOICE/01 Rain_ Not again! I hate water!
   icon: {fileID: 0}
   textLine: Stage 1

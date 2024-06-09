@@ -38,14 +38,15 @@ namespace Dialogue
                 ? currentClip.length
                 : 0;
             
-            Invoke(nameof(PlayClip), _clipDelay);
+            //Invoke(nameof(PlayClip), _clipDelay);
+            PlayClip(voiceLine.shit);
             Invoke(nameof(ResetAll), _resetDelay + length);
         }
 
-        private void PlayClip()
+        private void PlayClip(string path)
         {
             //// TODO: change to FMOD clip
-            FMODUnity.RuntimeManager.PlayOneShot("event:/VOICE/01 Rain_ Not again! I hate water!");
+            FMODUnity.RuntimeManager.PlayOneShot(path);
             //Debug.Log("playing audio clip...");
             // _audioSource.Play();
         }
