@@ -235,11 +235,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2422243172165646558, guid: a50534db2c779324da285455b44d289e, type: 3}
       propertyPath: stages.Array.data[6].time
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2422243172165646558, guid: a50534db2c779324da285455b44d289e, type: 3}
       propertyPath: stages.Array.data[7].time
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2422243172165646558, guid: a50534db2c779324da285455b44d289e, type: 3}
       propertyPath: stages.Array.data[0].voiceLine
@@ -1284,7 +1284,7 @@ MonoBehaviour:
   maxSpeed: 20
   dashForce: 10
   dashCoolDown: 0.5
-  initialWaterStorage: 100
+  initialWaterStorage: 150
   shrinkSubtrahent: {fileID: 11400000, guid: 35ad55da0d2a0f54aac3a8467ad9af0a, type: 2}
   WaterStorageCap: 150
 --- !u!50 &873841122
@@ -1637,7 +1637,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2109102026759068528, guid: e9ad254df78ef024084a0c2e1eaed865, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.07
+      value: -0.39
       objectReference: {fileID: 0}
     - target: {fileID: 2980505917378326819, guid: e9ad254df78ef024084a0c2e1eaed865, type: 3}
       propertyPath: m_Lens.OrthographicSize
@@ -1657,7 +1657,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4493239392253321996, guid: e9ad254df78ef024084a0c2e1eaed865, type: 3}
       propertyPath: orthographic size
-      value: 8.53
+      value: 5.8
       objectReference: {fileID: 0}
     - target: {fileID: 6547124697507742244, guid: e9ad254df78ef024084a0c2e1eaed865, type: 3}
       propertyPath: m_LocalPosition.x

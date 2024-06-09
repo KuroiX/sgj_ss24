@@ -37,9 +37,9 @@ namespace Dialogue
             var length = currentClip
                 ? currentClip.length
                 : 0;
-            shit1 = voiceLine.shit;
-            Invoke(nameof(PlayClip), _clipDelay);
-            //PlayClip(voiceLine.shit);
+            //shit1 = voiceLine.shit;
+            //Invoke(nameof(PlayClip), _clipDelay);
+            PlayClip(voiceLine.shit);
             Invoke(nameof(ResetAll), _resetDelay + length);
         }
 
@@ -48,7 +48,7 @@ namespace Dialogue
         private void PlayClip(string path)
         {
             //// TODO: change to FMOD clip
-            FMODUnity.RuntimeManager.PlayOneShot(shit1);
+            FMODUnity.RuntimeManager.PlayOneShot(path);
             //Debug.Log("playing audio clip...");
             // _audioSource.Play();
         }

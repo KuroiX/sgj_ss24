@@ -77,10 +77,12 @@ public class GameLoop : MonoBehaviour
         cardUi.CreateNewUICards(stages[_currentStage].cards[0].prefabTransform, stages[_currentStage].cards[1].prefabTransform);
         _currentTime = stages[_currentStage].time;
         stages[_currentStage].TriggerStageEnter();
+        /*
         if (stages[_currentStage].voiceLine is not null)
         {
             dialogueManager.ShowVoiceLine(stages[_currentStage].voiceLine);
         }
+        */
         SetPlayerCards(_currentStage);
     }
 
@@ -150,12 +152,12 @@ public class GameLoop : MonoBehaviour
         }
         
         _currentStage++;
-        /*
+        
         if (stages[_currentStage].voiceLine is not null)
         {
             dialogueManager.ShowVoiceLine(stages[_currentStage].voiceLine);
         }
-        */
+        
         
         //EnterStage();
         TriggerCutscene();

@@ -16,5 +16,4 @@ MonoBehaviour:
   shit: "event:/VOICE/07 Argh, let\u2019s see how fast you can slide around when
     I flip your button mappings!"
   icon: {fileID: 21300000, guid: 6409f0d9b2a809c41bc93e0a3718657d, type: 3}
-  textLine: "Argh, let\u2019s see how fast you can slide around when I flip your
-    button mappings!"
+  textLine: "Let\u2019s see how fast you are when I flip your button mappings!"

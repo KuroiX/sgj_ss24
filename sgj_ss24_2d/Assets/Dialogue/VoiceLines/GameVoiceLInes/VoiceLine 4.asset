@@ -16,5 +16,4 @@ MonoBehaviour:
   shit: "event:/VOICE/14 Nothing can really match the clean burn of hardwood charcoal.
     Here, I\u2019ll show you!"
   icon: {fileID: 21300000, guid: f54fba99c7c66a242adaf804cdbe24dd, type: 3}
-  textLine: "Nothing can really match the clean burn of hardwood charcoal. Here,
-    I\u2019ll show you!"
+  textLine: Nothing can really match the clean burn of hardwood charcoal.
