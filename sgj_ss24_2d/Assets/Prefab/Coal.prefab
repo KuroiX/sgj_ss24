@@ -223,3 +223,4 @@ MonoBehaviour:
   lifeTime: 5
   rotationSpeed: 500
   sprite: {fileID: 470759681474697587}
+  damage: 1000

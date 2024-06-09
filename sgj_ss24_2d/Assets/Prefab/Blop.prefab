@@ -262,6 +262,10 @@ PrefabInstance:
       propertyPath: rigidbody
       value: 
       objectReference: {fileID: 7429098294836579628}
+    - target: {fileID: 7422515879354799552, guid: 3ddff10753c8f274ea04bd6c99c6b73a, type: 3}
+      propertyPath: blobController
+      value: 
+      objectReference: {fileID: 7363883495701832670}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
