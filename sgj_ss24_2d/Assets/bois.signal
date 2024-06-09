@@ -9,10 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3debef488e6d4d869d2063b9099f121e, type: 3}
-  m_Name: DroppyLine 1
+  m_Script: {fileID: 11500000, guid: d6fa2d92fc1b3f34da284357edf89c3b, type: 3}
+  m_Name: bois
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 0}
-  shit: 
-  icon: {fileID: 21300000, guid: 9d79ba899c3c0c5498e4be5a6cf2be3d, type: 3}
-  textLine: "If it gets any hotter, we\u2019ll evaporate!"

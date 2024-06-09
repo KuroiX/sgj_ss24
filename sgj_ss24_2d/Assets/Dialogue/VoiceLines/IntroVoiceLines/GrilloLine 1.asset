@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: GrilloLine 1
   m_EditorClassIdentifier: 
   audioClip: {fileID: 0}
+  shit: 
   icon: {fileID: 21300000, guid: 60ada237ba811d741b9964e72b5874a6, type: 3}
-  textLine: Perish, puny little droplet! Only I will prevail!
+  textLine: Perish, puny little droplet! This is a professional barbecue setup!

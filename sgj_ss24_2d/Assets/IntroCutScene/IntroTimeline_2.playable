@@ -25,13 +25,13 @@ MonoBehaviour:
     m_Start: 0
     m_ClipIn: 0
     m_Asset: {fileID: 630715723869245837}
-    m_Duration: 7.5
+    m_Duration: 17.033333333333335
     m_TimeScale: 1
     m_ParentTrack: {fileID: -8527592717568870489}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
     m_BlendInDuration: -1
-    m_BlendOutDuration: 1.3166666666666451
+    m_BlendOutDuration: 1.4666666666666686
     m_MixInCurve:
       serializedVersion: 2
       m_Curve: []
@@ -73,15 +73,15 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: Virtual Camera 2
   - m_Version: 1
-    m_Start: 6.183333333333355
+    m_Start: 15.566666666666666
     m_ClipIn: 0
     m_Asset: {fileID: 6590068306045554473}
-    m_Duration: 2.483333333333311
+    m_Duration: 2.999999999999977
     m_TimeScale: 1
     m_ParentTrack: {fileID: -8527592717568870489}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
-    m_BlendInDuration: 1.3166666666666451
+    m_BlendInDuration: 1.4666666666666686
     m_BlendOutDuration: -1
     m_MixInCurve:
       serializedVersion: 2
@@ -107,6 +107,22 @@ MonoBehaviour:
     m_DisplayName: Virtual Camera
   m_Markers:
     m_Objects: []
+--- !u!114 &-7345523744293895688
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
+  m_Name: Signal Emitter
+  m_EditorClassIdentifier: 
+  m_Time: 5.75
+  m_Retroactive: 0
+  m_EmitOnce: 0
+  m_Asset: {fileID: 11400000, guid: 967122c20af18204597efae242aa030f, type: 2}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,7 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
   m_Name: OnFire2
   m_EditorClassIdentifier: 
-  m_Time: 6.033333333333335
+  m_Time: 12.266666666666667
   m_Retroactive: 0
   m_EmitOnce: 0
   m_Asset: {fileID: 11400000, guid: d0eebd95955768f4d90250c2c889afe1, type: 2}
@@ -187,6 +203,7 @@ MonoBehaviour:
     - {fileID: 9096444702128156834}
     - {fileID: 2640083588681544231}
     - {fileID: 4979746430810507290}
+    - {fileID: -7345523744293895688}
 --- !u!114 &4979746430810507290
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -199,7 +216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
   m_Name: OnCutSceneEnde
   m_EditorClassIdentifier: 
-  m_Time: 8.033333333333333
+  m_Time: 15.566666666666666
   m_Retroactive: 0
   m_EmitOnce: 0
   m_Asset: {fileID: 11400000, guid: 5c9a52ca715ff864d9a0251219657db8, type: 2}
@@ -215,7 +232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
   m_Name: OnGrilloFire1
   m_EditorClassIdentifier: 
-  m_Time: 1.5333333333333337
+  m_Time: 1.5666666666666667
   m_Retroactive: 0
   m_EmitOnce: 0
   m_Asset: {fileID: 11400000, guid: 1d6f62b01812677448937d63ec95fb24, type: 2}
@@ -247,7 +264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
   m_Name: OnDropLine2
   m_EditorClassIdentifier: 
-  m_Time: 3.016666666666666
+  m_Time: 5.75
   m_Retroactive: 0
   m_EmitOnce: 0
   m_Asset: {fileID: 11400000, guid: bff4cb7d81f4de145a2e6a0e02005d86, type: 2}
