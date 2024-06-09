@@ -37,21 +37,23 @@ namespace Dialogue
             var length = currentClip
                 ? currentClip.length
                 : 0;
-            
-            //Invoke(nameof(PlayClip), _clipDelay);
-            PlayClip(voiceLine.shit);
+            shit1 = voiceLine.shit;
+            Invoke(nameof(PlayClip), _clipDelay);
+            //PlayClip(voiceLine.shit);
             Invoke(nameof(ResetAll), _resetDelay + length);
         }
+
+        private string shit1;
 
         private void PlayClip(string path)
         {
             //// TODO: change to FMOD clip
-            FMODUnity.RuntimeManager.PlayOneShot(path);
+            FMODUnity.RuntimeManager.PlayOneShot(shit1);
             //Debug.Log("playing audio clip...");
             // _audioSource.Play();
         }
 
-        private void ResetAll()
+        public void ResetAll()
         {
             Debug.Log("resetting box and clip");
             textBox.HideTextBox();

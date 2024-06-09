@@ -244,7 +244,7 @@ PrefabInstance:
     - target: {fileID: 2422243172165646558, guid: a50534db2c779324da285455b44d289e, type: 3}
       propertyPath: stages.Array.data[0].voiceLine
       value: 
-      objectReference: {fileID: 11400000, guid: 96dd924cc1637be47ae2557b6a2e265f, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 2422243172165646558, guid: a50534db2c779324da285455b44d289e, type: 3}
       propertyPath: stages.Array.data[1].voiceLine
       value: 
@@ -1255,7 +1255,7 @@ Transform:
   m_GameObject: {fileID: 873841118}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.08, y: -0.19, z: 0}
+  m_LocalPosition: {x: -4, y: 2.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -1632,7 +1632,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2109102026759068528, guid: e9ad254df78ef024084a0c2e1eaed865, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.39
+      value: -3.07
       objectReference: {fileID: 0}
     - target: {fileID: 2980505917378326819, guid: e9ad254df78ef024084a0c2e1eaed865, type: 3}
       propertyPath: m_Lens.OrthographicSize
@@ -1652,7 +1652,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4493239392253321996, guid: e9ad254df78ef024084a0c2e1eaed865, type: 3}
       propertyPath: orthographic size
-      value: 5.8
+      value: 8.53
       objectReference: {fileID: 0}
     - target: {fileID: 6547124697507742244, guid: e9ad254df78ef024084a0c2e1eaed865, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2140,10 +2140,10 @@ MonoBehaviour:
           m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
+        - m_Target: {fileID: 957969167}
+          m_TargetAssemblyTypeName: Dialogue.DialogueManager, Assembly-CSharp
+          m_MethodName: ResetAll
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2151,30 +2151,6 @@ MonoBehaviour:
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 1
-          m_CallState: 2
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: Dialogue.DialogueManager, Assembly-CSharp
-          m_MethodName: ShowVoiceLine
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 11400000, guid: 3e270f68640de1443855e1c806f70350, type: 2}
-            m_ObjectArgumentAssemblyTypeName: Dialogue.VoiceLine, Assembly-CSharp
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
           m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
@@ -3244,7 +3220,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3788176287011228937, guid: 01470f712f730414099b3c52238e0990, type: 3}
       propertyPath: duration
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3972642628714670618, guid: 01470f712f730414099b3c52238e0990, type: 3}
       propertyPath: m_IsActive
@@ -3264,7 +3240,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7517391099863056299, guid: 01470f712f730414099b3c52238e0990, type: 3}
       propertyPath: timeBeforePlayingVoiceClip
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8117939952591401727, guid: 01470f712f730414099b3c52238e0990, type: 3}
       propertyPath: m_margin.z
