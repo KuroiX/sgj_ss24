@@ -120,28 +120,68 @@ public class PlayerClass : MonoBehaviour
                     break;
                 case CardAction.Down:
                     if (input.y < 0)
+                    {
                         blobController.SetDown(input.y < -schranke ? input.y : 0);
+                        if (input.y < -schranke)
+                            VibratorGoBrrrrr(input.y);
+                        else
+                            VibrationGOAwai();
+                    }
+                    else
+                        VibrationGOAwai();
                     break;
                 case CardAction.Right:
                     if (input.x >= 0)
+                    {
                         blobController.SetRight(input.x > schranke ? input.x : 0);
+                        if (input.x > schranke)
+                        {
+                            VibratorGoBrrrrr(input.x);
+                        }
+                        else
+                        {
+                            VibrationGOAwai();
+                        }
+                    }
+                    else
+                    {
+                        VibrationGOAwai();
+                    }
                     break;
                 case CardAction.Left:
                     if (input.x < 0)
+                    {
                         blobController.SetLeft(input.x < -schranke ? input.x : 0);
+                        if (input.x < -schranke)
+                        {
+                            VibratorGoBrrrrr(input.x);
+                        }
+                        else
+                        {
+                            VibrationGOAwai();
+                        }
+                    }
+                    else
+                    {
+                        VibrationGOAwai();
+                    }
                     break;
             }
         }
     }
     
+    
+    
     public void ActionOnperformedDashE(InputAction.CallbackContext obj)
     {
-        Debug.Log("dash right");
-        
         foreach (var cardAction in _card.cardActions)
         {
-            if(cardAction == CardAction.RightD)
+            if (cardAction == CardAction.RightD)
+            {
                 blobController.Dash(Vector2.right);
+                VibratorGoBrrrrr(10f);
+                //Invoke(nameof(VibrationGOAwai), 0.1f);
+            }
         }
     }
     
@@ -150,8 +190,11 @@ public class PlayerClass : MonoBehaviour
         Debug.Log("dash up");
         foreach (var cardAction in _card.cardActions)
         {
-            if(cardAction == CardAction.UpD)
+            if (cardAction == CardAction.UpD)
+            {
                 blobController.Dash(Vector2.up);
+                VibratorGoBrrrrr(10f);
+            }
         }
     }
     
@@ -160,8 +203,11 @@ public class PlayerClass : MonoBehaviour
         Debug.Log("dash south");
         foreach (var cardAction in _card.cardActions)
         {
-            if(cardAction == CardAction.DownD)
+            if (cardAction == CardAction.DownD)
+            {
                 blobController.Dash(Vector2.down);
+                VibratorGoBrrrrr(10f);
+            }
         }
     }
     public void ActionOnperformedDashW(InputAction.CallbackContext obj)
@@ -170,7 +216,11 @@ public class PlayerClass : MonoBehaviour
         foreach (var cardAction in _card.cardActions)
         {
             if(cardAction == CardAction.LeftD)
+            {
                 blobController.Dash(Vector2.left);
+                VibratorGoBrrrrr(10f);
+            }
+            
         }
     }
     
