@@ -719,6 +719,7 @@ MonoBehaviour:
   dashCoolDown: 0.5
   initialWaterStorage: 100
   shrinkSubtrahent: {fileID: 11400000, guid: 35ad55da0d2a0f54aac3a8467ad9af0a, type: 2}
+  WaterStorageCap: 150
 --- !u!50 &873841122
 Rigidbody2D:
   serializedVersion: 4
