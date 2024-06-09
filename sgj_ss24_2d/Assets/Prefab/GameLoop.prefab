@@ -86,7 +86,7 @@ MonoBehaviour:
     OnStageEnter:
       m_PersistentCalls:
         m_Calls: []
-    voiceLine: {fileID: 11400000, guid: 96dd924cc1637be47ae2557b6a2e265f, type: 2}
+    voiceLine: {fileID: 11400000, guid: 80fea1e72cc9aaa48bfed0a4f234c1c0, type: 2}
   - cards:
     - {fileID: 11400000, guid: 57a9049d58435fa4abfcb547d091ba4c, type: 2}
     - {fileID: 11400000, guid: d1c7c1c22ed126c4bb626787c0985c26, type: 2}
@@ -94,7 +94,7 @@ MonoBehaviour:
     OnStageEnter:
       m_PersistentCalls:
         m_Calls: []
-    voiceLine: {fileID: 11400000, guid: 7f24e7715f87c8a4b835ed119bf9bdd5, type: 2}
+    voiceLine: {fileID: 11400000, guid: 96dd924cc1637be47ae2557b6a2e265f, type: 2}
   - cards:
     - {fileID: 11400000, guid: 57a9049d58435fa4abfcb547d091ba4c, type: 2}
     - {fileID: 11400000, guid: d1c7c1c22ed126c4bb626787c0985c26, type: 2}
@@ -114,23 +114,23 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+    voiceLine: {fileID: 11400000, guid: 4b7844445ba4450469115ff4f4427a9a, type: 2}
+  - cards:
+    - {fileID: 11400000, guid: e029f7a72b562954fb2dd6e0aca78832, type: 2}
+    - {fileID: 11400000, guid: c1964f1f127b29d4692903a7c6b336f8, type: 2}
+    time: 20
+    OnStageEnter:
+      m_PersistentCalls:
+        m_Calls: []
+    voiceLine: {fileID: 11400000, guid: 7f24e7715f87c8a4b835ed119bf9bdd5, type: 2}
+  - cards:
+    - {fileID: 11400000, guid: c1964f1f127b29d4692903a7c6b336f8, type: 2}
+    - {fileID: 11400000, guid: e029f7a72b562954fb2dd6e0aca78832, type: 2}
+    time: 20
+    OnStageEnter:
+      m_PersistentCalls:
+        m_Calls: []
     voiceLine: {fileID: 11400000, guid: 70a770a7e26474a40b033c4b619718c8, type: 2}
-  - cards:
-    - {fileID: 11400000, guid: c1964f1f127b29d4692903a7c6b336f8, type: 2}
-    - {fileID: 11400000, guid: e029f7a72b562954fb2dd6e0aca78832, type: 2}
-    time: 20
-    OnStageEnter:
-      m_PersistentCalls:
-        m_Calls: []
-    voiceLine: {fileID: 11400000, guid: b98263d9e9d6911419d6947ab9188ee4, type: 2}
-  - cards:
-    - {fileID: 11400000, guid: e029f7a72b562954fb2dd6e0aca78832, type: 2}
-    - {fileID: 11400000, guid: c1964f1f127b29d4692903a7c6b336f8, type: 2}
-    time: 20
-    OnStageEnter:
-      m_PersistentCalls:
-        m_Calls: []
-    voiceLine: {fileID: 11400000, guid: e2edca782776ce14f86aeaf46eb422cd, type: 2}
   - cards:
     - {fileID: 11400000, guid: d1c7c1c22ed126c4bb626787c0985c26, type: 2}
     - {fileID: 11400000, guid: 57a9049d58435fa4abfcb547d091ba4c, type: 2}
@@ -150,7 +150,15 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-    voiceLine: {fileID: 11400000, guid: f34a46f6cd50a1645b09c08f0b404f34, type: 2}
+    voiceLine: {fileID: 11400000, guid: b98263d9e9d6911419d6947ab9188ee4, type: 2}
+  - cards:
+    - {fileID: 11400000, guid: 8ed10cd937554e047b327e0645102be0, type: 2}
+    - {fileID: 11400000, guid: 0f65534306418bb43842069b735eeb11, type: 2}
+    time: 20
+    OnStageEnter:
+      m_PersistentCalls:
+        m_Calls: []
+    voiceLine: {fileID: 11400000, guid: e2edca782776ce14f86aeaf46eb422cd, type: 2}
   - cards:
     - {fileID: 11400000, guid: df654c2b4a1ecee40bc9283e153e8038, type: 2}
     - {fileID: 11400000, guid: 4fba6a3fd9e74544f987d7926096b5b3, type: 2}
@@ -161,7 +169,7 @@ MonoBehaviour:
     voiceLine: {fileID: 11400000, guid: f34a46f6cd50a1645b09c08f0b404f34, type: 2}
   timerText: {fileID: 0}
   playerInputManager: {fileID: 0}
-  cutsceneTime: 10
+  cutsceneTime: 5
   OnGameLoopStarted:
     m_PersistentCalls:
       m_Calls:

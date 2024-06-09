@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 753f8c44eef073c448fe6f0fb9f3c7b1, type: 3}
-  m_Name: Advanced 1
+  m_Name: Advanced 3
   m_EditorClassIdentifier: 
-  cardActions: 0600000001000000
-  prefabTransform: {fileID: 8200446196264749781, guid: ee06e7ea75edf15469a56ae291ed3a53, type: 3}
+  cardActions: 0600000007000000
+  prefabTransform: {fileID: 8200446196264749781, guid: 22ebc428e285d4a46a063533a5b403ce, type: 3}

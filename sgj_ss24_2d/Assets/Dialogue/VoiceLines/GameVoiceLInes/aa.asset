@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3debef488e6d4d869d2063b9099f121e, type: 3}
-  m_Name: VoiceLine 8
+  m_Name: aa
   m_EditorClassIdentifier: 
   audioClip: {fileID: 0}
+  shit: 
   icon: {fileID: 0}
-  textLine: Stage 7
+  textLine: Test

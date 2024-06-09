@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: VoiceLine 1
   m_EditorClassIdentifier: 
   audioClip: {fileID: 0}
-  shit: event:/VOICE/01 Rain_ Not again! I hate water!
-  icon: {fileID: 0}
-  textLine: Stage 2
+  shit: event:/VOICE/16 Grrr, take this, you annoying little water peasants!
+  icon: {fileID: 21300000, guid: 6409f0d9b2a809c41bc93e0a3718657d, type: 3}
+  textLine: Grrr, take this, you annoying little water peasants!

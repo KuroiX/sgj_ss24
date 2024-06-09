@@ -194,10 +194,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 959868932}
     - target: {fileID: 2422243172165646558, guid: a50534db2c779324da285455b44d289e, type: 3}
-      propertyPath: cutsceneTime
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2422243172165646558, guid: a50534db2c779324da285455b44d289e, type: 3}
       propertyPath: dialogueManager
       value: 
       objectReference: {fileID: 957969167}
