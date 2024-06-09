@@ -8,6 +8,9 @@ public class CoalMovement : MonoBehaviour
     public Vector3 moveDirection;
     public float speed;
     public float lifeTime;
+    public float rotationSpeed;
+    public GameObject sprite;
+    public float damage;
 
     private void Start()
     {
@@ -17,6 +20,7 @@ public class CoalMovement : MonoBehaviour
     private void Update()
     {
         transform.position += moveDirection * speed * Time.deltaTime;
+        sprite.transform.Rotate(Vector3.forward, rotationSpeed * Time.deltaTime);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -24,7 +28,7 @@ public class CoalMovement : MonoBehaviour
         if(!other.CompareTag("Player")) return;
 
         Debug.Log("Player hit!");
-        //TODO stuff abziehen!
+        other.GetComponent<BlobController>().GetHit(damage);
     }
 
     private IEnumerator DestroyObject()
