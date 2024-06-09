@@ -12,6 +12,7 @@ namespace IntroCutScene
             if (!other.CompareTag("Drop")) return;
 
             GameObject.Find("blitzii").GetComponent<Animator>().enabled = true;
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Lightning");
             StartCoroutine(LoadScene());
         }
 
