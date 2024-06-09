@@ -20,6 +20,7 @@ public class BlobController : MonoBehaviour
     [Header("Other")] public float initialWaterStorage;
     public SubtrahentSO shrinkSubtrahent;
     //public float shrinkFactor;
+    public float WaterStorageCap = 200;
 
 
     private float _upInput;
@@ -86,6 +87,11 @@ public class BlobController : MonoBehaviour
         {
             FindObjectOfType<GameLoop>().GameOver();
             StopBlob();
+        }
+
+        if (_currentWaterStorage > WaterStorageCap)
+        {
+            _currentWaterStorage = WaterStorageCap;
         }
 
         _currentWaterStorage -= shrinkSubtrahent.shringkSubtrahent * Time.deltaTime;
