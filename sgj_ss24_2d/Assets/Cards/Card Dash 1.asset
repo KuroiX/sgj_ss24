@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 753f8c44eef073c448fe6f0fb9f3c7b1, type: 3}
   m_Name: Card Dash 1
   m_EditorClassIdentifier: 
-  cardActions: 00000000010000000400000005000000
-  prefabTransform: {fileID: 0}
+  cardActions: 0000000005000000
+  prefabTransform: {fileID: 8200446196264749781, guid: cef5ef72feea90d4c8eef8e63f23a065, type: 3}
