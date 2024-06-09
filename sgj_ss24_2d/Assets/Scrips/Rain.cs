@@ -19,14 +19,13 @@ public class Rain : MonoBehaviour
     private void Start()
     {
         _rainDrops = new List<GameObject>();
-        
+        GetComponent<ParticleSystem>().Play();
     }
 
     [ContextMenu("Start Rain")]
     public void StartRain()
     {
         StartCoroutine(SpawnRain());
-        GetComponent<ParticleSystem>().Play();
     }
 
     private void Update()

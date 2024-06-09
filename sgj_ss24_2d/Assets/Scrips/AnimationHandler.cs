@@ -8,6 +8,7 @@ public class AnimationHandler : MonoBehaviour
     private Animator _animator;
     private SpriteRenderer _spriteRenderer;
     public Rigidbody2D rigidbody;
+    public BlobController blobController;
 
     private void Start()
     {
@@ -17,8 +18,8 @@ public class AnimationHandler : MonoBehaviour
 
     void Update()
     {
-        var vel = rigidbody.velocity;
-
+        var vel = blobController.CalculateDir();
+        
         float horizontal = vel.x;
         float vertical = vel.y;
       

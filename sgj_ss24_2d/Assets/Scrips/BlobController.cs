@@ -91,7 +91,12 @@ public class BlobController : MonoBehaviour
         transform.localScale = new Vector3(1, 1, 1) * _currentWaterStorage / initialWaterStorage;
     }
 
-    private Vector2 CalculateDir()
+    public void GetHit(float value)
+    {
+        _currentWaterStorage -= value;
+    }
+
+    public Vector2 CalculateDir()
     {
         var vec = new Vector2(_rightInput - _leftInput, _upInput - _downInput);
         return vec.magnitude > 1 ? vec.normalized : vec;
