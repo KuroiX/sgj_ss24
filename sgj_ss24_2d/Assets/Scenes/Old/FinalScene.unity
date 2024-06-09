@@ -1123,11 +1123,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2923779782681607000, guid: 51641b43b1e36fb4a913c150730f1511, type: 3}
       propertyPath: maxSpawnTime
-      value: 0.75
+      value: 0.85
       objectReference: {fileID: 0}
     - target: {fileID: 2923779782681607000, guid: 51641b43b1e36fb4a913c150730f1511, type: 3}
       propertyPath: minSpawnTime
-      value: 0.25
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 4693797921808459088, guid: 51641b43b1e36fb4a913c150730f1511, type: 3}
       propertyPath: m_Mesh
@@ -1296,7 +1296,7 @@ MonoBehaviour:
   maxSpeed: 20
   dashForce: 10
   dashCoolDown: 0.5
-  initialWaterStorage: 150
+  initialWaterStorage: 100
   shrinkSubtrahent: {fileID: 11400000, guid: 35ad55da0d2a0f54aac3a8467ad9af0a, type: 2}
   WaterStorageCap: 150
 --- !u!50 &873841122
