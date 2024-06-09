@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioClip: {fileID: 0}
   shit: event:/VOICE/06 Maybe I should try dashing.
-  icon: {fileID: 21300000, guid: 100409b72df3a12448ce6d526b993541, type: 3}
+  icon: {fileID: 21300000, guid: 9d79ba899c3c0c5498e4be5a6cf2be3d, type: 3}
   textLine: Maybe I should try dashing.

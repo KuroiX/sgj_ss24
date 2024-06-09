@@ -150,6 +150,13 @@ public class GameLoop : MonoBehaviour
         }
         
         _currentStage++;
+        /*
+        if (stages[_currentStage].voiceLine is not null)
+        {
+            dialogueManager.ShowVoiceLine(stages[_currentStage].voiceLine);
+        }
+        */
+        
         //EnterStage();
         TriggerCutscene();
     }
@@ -172,7 +179,7 @@ public class GameLoop : MonoBehaviour
         paused = true;
         StopEverything.Invoke();
         
-        yield return new WaitForSeconds(cutsceneTime);
+        yield return new WaitForSeconds(3);
         
         StartEverything.Invoke();
         paused = false;
