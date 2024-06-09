@@ -125,9 +125,39 @@ public class PlayerClass : MonoBehaviour
        }
     }
     
-    public void ActionOnperformedDash(InputAction.CallbackContext obj)
+    public void ActionOnperformedDashE(InputAction.CallbackContext obj)
     {
-      blobController.Dash();
+        foreach (var cardAction in _card.cardActions)
+        {
+            if(cardAction == CardAction.RightD)
+                blobController.Dash(Vector2.right);
+        }
+    }
+    
+    public void ActionOnperformedDashN(InputAction.CallbackContext obj)
+    {
+        foreach (var cardAction in _card.cardActions)
+        {
+            if(cardAction == CardAction.UpD)
+                blobController.Dash(Vector2.up);
+        }
+    }
+    
+    public void ActionOnperformedDashS(InputAction.CallbackContext obj)
+    {
+        foreach (var cardAction in _card.cardActions)
+        {
+            if(cardAction == CardAction.DownD)
+                blobController.Dash(Vector2.down);
+        }
+    }
+    public void ActionOnperformedDashW(InputAction.CallbackContext obj)
+    {
+        foreach (var cardAction in _card.cardActions)
+        {
+            if(cardAction == CardAction.LeftD)
+                blobController.Dash(Vector2.left);
+        }
     }
     
     public void SetCard(Card newCard)
