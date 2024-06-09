@@ -1121,6 +1121,14 @@ PrefabInstance:
       propertyPath: height
       value: 4.54
       objectReference: {fileID: 0}
+    - target: {fileID: 2923779782681607000, guid: 51641b43b1e36fb4a913c150730f1511, type: 3}
+      propertyPath: maxSpawnTime
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 2923779782681607000, guid: 51641b43b1e36fb4a913c150730f1511, type: 3}
+      propertyPath: minSpawnTime
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 4693797921808459088, guid: 51641b43b1e36fb4a913c150730f1511, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -1172,6 +1180,10 @@ PrefabInstance:
     - target: {fileID: 6927353901318846381, guid: 51641b43b1e36fb4a913c150730f1511, type: 3}
       propertyPath: m_Name
       value: RainManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297438462715592335, guid: 51641b43b1e36fb4a913c150730f1511, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.a
+      value: 0.39215687
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1637,7 +1649,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2109102026759068528, guid: e9ad254df78ef024084a0c2e1eaed865, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.39
+      value: -3.07
       objectReference: {fileID: 0}
     - target: {fileID: 2980505917378326819, guid: e9ad254df78ef024084a0c2e1eaed865, type: 3}
       propertyPath: m_Lens.OrthographicSize
@@ -1657,7 +1669,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4493239392253321996, guid: e9ad254df78ef024084a0c2e1eaed865, type: 3}
       propertyPath: orthographic size
-      value: 5.8
+      value: 8.53
       objectReference: {fileID: 0}
     - target: {fileID: 6547124697507742244, guid: e9ad254df78ef024084a0c2e1eaed865, type: 3}
       propertyPath: m_LocalPosition.x
