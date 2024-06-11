@@ -23,7 +23,7 @@ namespace IntroCutScene
             yield return null;
             yield return null;
 
-            FindObjectOfType<SceneLoader>().LoadNextScene();
+            FindObjectOfType<SceneLoader>().LoadSceneByIndex(3);
         }
     }
 }

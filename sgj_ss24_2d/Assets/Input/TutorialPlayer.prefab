@@ -154,6 +154,166 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 1bea4541-e5f2-4ce8-a2a4-36c5994bffbb
     m_ActionName: Move/AbilityW[/DualShock4GamepadHID/buttonWest,/DualShock4GamepadHID1/buttonWest]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8107859032681714043}
+        m_TargetAssemblyTypeName: PlayerClass, Assembly-CSharp
+        m_MethodName: ActionOnperformedMove
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: d6c4bf4f-16fc-42f2-8544-b8d62b89f25f
+    m_ActionName: SinglePlayer/MoveLeft
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8107859032681714043}
+        m_TargetAssemblyTypeName: PlayerClass, Assembly-CSharp
+        m_MethodName: ActionOnperformedMove
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: f9491dd9-155a-4d8e-906d-f60a8ab8f881
+    m_ActionName: SinglePlayer/MoveRight
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8107859032681714043}
+        m_TargetAssemblyTypeName: PlayerClass, Assembly-CSharp
+        m_MethodName: ActionOnperformedDashN
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 7bdb762a-8468-44a6-84d5-7f1f941b0bc6
+    m_ActionName: SinglePlayer/DLUp
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8107859032681714043}
+        m_TargetAssemblyTypeName: PlayerClass, Assembly-CSharp
+        m_MethodName: ActionOnperformedDashS
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 628e7706-ef0c-4a7f-9b3e-cb5d8ddc0bb7
+    m_ActionName: SinglePlayer/DLDown
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8107859032681714043}
+        m_TargetAssemblyTypeName: PlayerClass, Assembly-CSharp
+        m_MethodName: ActionOnperformedDashW
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: be6fce32-e48c-4815-bf9c-9898a59140bf
+    m_ActionName: SinglePlayer/DLLeft
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8107859032681714043}
+        m_TargetAssemblyTypeName: PlayerClass, Assembly-CSharp
+        m_MethodName: ActionOnperformedDashE
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 40f09af8-1e9b-40d4-ae1e-9e61d8706ad5
+    m_ActionName: SinglePlayer/DLRight
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8107859032681714043}
+        m_TargetAssemblyTypeName: PlayerClass, Assembly-CSharp
+        m_MethodName: ActionOnperformedDashN
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 80d677ca-3d49-4d77-bc6c-763b0c8a1dde
+    m_ActionName: SinglePlayer/DRUp
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8107859032681714043}
+        m_TargetAssemblyTypeName: PlayerClass, Assembly-CSharp
+        m_MethodName: ActionOnperformedDashS
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: d9ce9ec8-bfce-47c9-8dae-f4ea65629a2c
+    m_ActionName: SinglePlayer/DRDown
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8107859032681714043}
+        m_TargetAssemblyTypeName: PlayerClass, Assembly-CSharp
+        m_MethodName: ActionOnperformedDashW
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 8dfe4450-fc7e-400b-94c8-a79439b7084c
+    m_ActionName: SinglePlayer/DRLeft
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8107859032681714043}
+        m_TargetAssemblyTypeName: PlayerClass, Assembly-CSharp
+        m_MethodName: ActionOnperformedDashE
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 884f51a2-fd4e-40a4-a8fe-4a1c5f3d56e1
+    m_ActionName: SinglePlayer/DRRight
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Move

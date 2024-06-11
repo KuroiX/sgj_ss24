@@ -17,16 +17,22 @@ public class PlayerClass : MonoBehaviour
     [SerializeField] private bool isTutorial;
     private bool started;
 
+    [SerializeField] private bool singlePlayerOne;
+    [SerializeField] private bool singlePlayerTwo;
+    
+
     private void Awake()
     {
         blobController = FindObjectOfType<BlobController>();
 
         if (isTutorial)
         {
+
+            bool isSinglePlayerGame = singlePlayerOne || singlePlayerTwo;
             //BlobController[] blobControllers = FindObjectsOfType<BlobController>();
             StartCoroutine(StartLobbyMovement());
 
-            if (FindObjectOfType<PlayerInputManager>().playerCount == 1)
+            if (singlePlayerOne || (!isSinglePlayerGame && FindObjectOfType<PlayerInputManager>().playerCount == 1))
             {
                 blobController = Instantiate(blobPrefab, new Vector3(-4f, -4f, 0f), Quaternion.identity)
                     .GetComponent<BlobController>();
@@ -43,7 +49,7 @@ public class PlayerClass : MonoBehaviour
                 DontDestroyOnLoad(gameObject);
             }
 
-            if (FindObjectOfType<PlayerInputManager>().playerCount == 2)
+            if (singlePlayerTwo || (!isSinglePlayerGame && FindObjectOfType<PlayerInputManager>().playerCount == 2))
             {
                 blobController = Instantiate(blobPrefab, new Vector3(4f, 2.5f, 0f), Quaternion.identity)
                     .GetComponent<BlobController>();
@@ -69,6 +75,8 @@ public class PlayerClass : MonoBehaviour
 
     private void Subscriber(Scene arg0, LoadSceneMode arg1)
     {
+        if (arg0.buildIndex == 2) return; 
+        
         isTutorial = false;
         blobController = FindObjectOfType<BlobController>();
 
@@ -233,11 +241,11 @@ public class PlayerClass : MonoBehaviour
     public void VibratorGoBrrrrr(float strangth)
     {
         strangth = Mathf.Clamp01(Mathf.Abs(strangth));
-        GetComponent<PlayerInput>().GetDevice<Gamepad>().SetMotorSpeeds(0, 0.02f * strangth);
+        GetComponent<PlayerInput>()?.GetDevice<Gamepad>()?.SetMotorSpeeds(0, 0.02f * strangth);
     }
 
     private void VibrationGOAwai()
     {
-        GetComponent<PlayerInput>().GetDevice<Gamepad>().SetMotorSpeeds(0, 0);
+        GetComponent<PlayerInput>()?.GetDevice<Gamepad>()?.SetMotorSpeeds(0, 0);
     }
 }
